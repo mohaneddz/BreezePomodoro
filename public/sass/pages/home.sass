@@ -1,0 +1,53 @@
+@import '../core/_variables.sass'
+
+.home
+    width: 100vw
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+    &__container
+        background-color: $color-primary
+        width: 50rem
+        height: 50rem
+        border-radius: 500px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.4)
+
+        &--timer
+            color: $color-secondary
+            font-size: 12rem
+            margin-bottom: 6rem
+            // text shadow
+            text-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.4)
+            background-color: $color-primary-dark
+            padding: 2rem
+            border-radius: 5px
+            inline
+
+        &__controls
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 0.75rem
+
+            & > *
+                display: flex
+                justify-content: center
+                align-items: center
+                fill: $color-primary-darker
+                height: 7rem
+                width: 7rem
+                
+                &:hover
+                    fill: $color-secondary
+                    cursor: pointer
+                
+                &:active
+                    transform: scale(1.1) translateY(-5px)
+                
+                // when clicking one button, the other button should be red
+                    
