@@ -1,10 +1,10 @@
 .main {
   background-image: linear-gradient(
-    to top,
-    rgba(var(--color-primary-rgb), 0.8),
-    rgba(var(--color-secondary-rgb), 0.8)
-  ),
-  url('../../img/Default.jpg');
+      to top,
+      rgba(var(--color-primary-rgb), 0.8),
+      rgba(var(--color-secondary-rgb), 0.8)
+    ),
+    url('../../img/Default.jpg');
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -30,8 +30,8 @@
 
   &__container {
     background-color: var(--color-primary);
-    width: 55rem;
-    height: 55rem;
+    width: 60rem;
+    height: 60rem;
     border-radius: 500px;
     display: flex;
     flex-direction: column;
@@ -40,7 +40,7 @@
     box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.4);
 
     &--timer {
-      color: var(--color-secondary);
+      color: var(--color-tertiary-lighter);
       font-size: 12rem;
       margin-bottom: 2rem;
       // text shadow
@@ -66,7 +66,7 @@
         width: 7rem;
 
         &:hover {
-          fill: var(--color-secondary);
+          fill: var(--color-tertiary-lighter);
           cursor: pointer;
         }
 
@@ -80,7 +80,22 @@
         height: 10rem;
         width: 10rem;
         width: 100%;
+        fill: var(--color-primary-darker);
+
+        &:hover {
+          fill: var(--color-secondary) !important;
+        }
+        &:active {
+          transform: scale(1.1) translateY(-5px);
+        }
+
       }
+    }
+
+    &--round {
+      color: var(--color-tertiary-lighter);
+      margin-top: 3rem;
+      font-size: 3rem;
     }
   }
 }

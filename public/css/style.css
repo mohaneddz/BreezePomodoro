@@ -27,6 +27,10 @@
   --color-tertiary-dark-rgb: 74, 90, 110;
   --color-tertiary-darker: rgb(47, 58, 74);
   --color-tertiary-darker-rgb: 47, 58, 74;
+  --color-tertiary-light: rgb(128, 146, 165);
+  --color-tertiary-light-rgb: 128, 146, 165;
+  --color-tertiary-lighter: rgb(153, 169, 186);
+  --color-tertiary-lighter-rgb: 153, 169, 186;
   --color-rest: rgb(183, 228, 199);
   --color-rest-rgb: 183, 228, 199;
   --color-rest-dark: rgb(143, 198, 168);
@@ -76,6 +80,10 @@
   --color-tertiary-dark-rgb: 79, 79, 79;
   --color-tertiary-darker: rgb(58, 58, 58);
   --color-tertiary-darker-rgb: 58, 58, 58;
+  --color-tertiary-light: rgb(141, 141, 141);
+  --color-tertiary-light-rgb: 141, 141, 141;
+  --color-tertiary-lighter: rgb(176, 176, 176);
+  --color-tertiary-lighter-rgb: 176, 176, 176;
   --color-rest: rgb(183, 183, 183);
   --color-rest-rgb: 183, 183, 183;
   --color-rest-dark: rgb(143, 143, 143);
@@ -125,6 +133,10 @@
   --color-tertiary-dark-rgb: 0, 6, 18;
   --color-tertiary-darker: rgb(0, 4, 15);
   --color-tertiary-darker-rgb: 0, 4, 15;
+  --color-tertiary-light: rgb(0, 10, 23);
+  --color-tertiary-light-rgb: 0, 10, 23;
+  --color-tertiary-lighter: rgb(0, 13, 29);
+  --color-tertiary-lighter-rgb: 0, 13, 29;
   --color-rest: rgb(114, 9, 183);
   --color-rest-rgb: 114, 9, 183;
   --color-rest-dark: rgb(95, 8, 160);
@@ -246,8 +258,8 @@ nav .home:active {
 }
 .main__container {
   background-color: var(--color-primary);
-  width: 55rem;
-  height: 55rem;
+  width: 60rem;
+  height: 60rem;
   border-radius: 500px;
   display: flex;
   flex-direction: column;
@@ -256,7 +268,7 @@ nav .home:active {
   box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.4);
 }
 .main__container--timer {
-  color: var(--color-secondary);
+  color: var(--color-tertiary-lighter);
   font-size: 12rem;
   margin-bottom: 2rem;
   text-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.4);
@@ -280,7 +292,7 @@ nav .home:active {
   width: 7rem;
 }
 .main__container__controls > *:hover {
-  fill: var(--color-secondary);
+  fill: var(--color-tertiary-lighter);
   cursor: pointer;
 }
 .main__container__controls > *:active {
@@ -290,6 +302,18 @@ nav .home:active {
   height: 10rem;
   width: 10rem;
   width: 100%;
+  fill: var(--color-primary-darker);
+}
+.main__container__controls--play:hover {
+  fill: var(--color-secondary) !important;
+}
+.main__container__controls--play:active {
+  transform: scale(1.1) translateY(-5px);
+}
+.main__container--round {
+  color: var(--color-tertiary-lighter);
+  margin-top: 3rem;
+  font-size: 3rem;
 }
 
 .settings {
@@ -309,7 +333,7 @@ nav .home:active {
   border-radius: 15px;
   display: grid;
   grid-template-columns: max-content 3fr;
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   gap: 5rem;
 }
 .settings .options__background {

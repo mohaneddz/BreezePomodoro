@@ -25,7 +25,7 @@
     // Grid Settings
     display: grid;
     grid-template-columns: max-content 3fr;
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     gap: 5rem;
 
     &__background {

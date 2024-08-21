@@ -1,5 +1,7 @@
 'use strict';
 
+const { Exception } = require("sass");
+
 // DOM Elements
 const counter = document.querySelector('.main__container--timer');
 const playbtn = document.querySelector('.main__container__controls--play');
@@ -12,7 +14,7 @@ const title = document.querySelector('.main__title');
 
 // Constants
 const DEFAULT_FOCUS_TIME = 3600 * 1000; // 1 hour
-const DEFAULT_REST_TIME = 900 * 1000;   // 15 minutes
+const DEFAULT_REST_TIME = 900 * 1000; // 15 minutes
 const DEFAULT_MAX_ROUNDS = 4;
 
 let max_rounds = DEFAULT_MAX_ROUNDS;
@@ -123,9 +125,10 @@ function back() {
     toggle_play_icon();
     rest ? resttheme() : focustime();
   }
-  if (round > 1) {
+  if (round > 1 && !rest) {
     round--;
   }
+  setround(round);
 }
 
 // Event Listeners

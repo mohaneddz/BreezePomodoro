@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="css/style.css" />
-    <script defer src="scripts/main.js"></script>
+    <script defer src="scripts/settings.js" type="module"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/img/favicon.png" type="image/x-icon" />
     <title>Website Template</title>
   </head>
   <body class="settings">
@@ -20,36 +21,33 @@
     <!--  Options -->
     <div class="options">
       <label for="intervals">Number Of Intervals : </label>
-      <input type="number" name="intervals" />
+      <input type="number" name="intervals" id="intervals" />
 
       <label for="focus">Focus duration : </label>
-      <input type="number" name="focus" />
+      <input type="number" name="focus" id="focus_duration" />
 
       <label for="rest">Rest duration : </label>
-      <input type="number" name="rest" />
-
-      <label for="break">Break duration : </label>
-      <input type="number" name="break" />
+      <input type="number" name="rest" id="rest_duration" />
 
       <label for="background">Set Background :</label>
-      <label class="options__background" for="file-upload">Upload File</label>
-      <input id="file-upload" type="file" name="background" accept="image/*" />
+      <label class="options__background" for="background">Upload File</label>
+      <input id="background" type="file" name="background" accept="image/*" />
 
       <label for="blur">Blur Amount : </label>
-      <input type="range" name="blur" />
+      <input type="range" name="blur" id="blur" />
 
       <label for="options__theme"> Theme : </label>
       <div class="options__theme">
         <label>
-          <input type="radio" name="theme" value="light" />
+          <input type="radio" name="theme" value="light" class="theme" />
           Lagoon
         </label>
         <label>
-          <input type="radio" name="theme" value="dark" />
+          <input type="radio" name="theme" value="dark" class="theme" />
           Owl
         </label>
         <label>
-          <input type="radio" name="theme" value="dark" />
+          <input type="radio" name="theme" value="dark" class="theme" />
           Monkai
         </label>
       </div>
