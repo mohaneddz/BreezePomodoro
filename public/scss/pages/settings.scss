@@ -1,0 +1,62 @@
+.settings {
+  // Background
+  background-image: linear-gradient(
+      to top,
+      rgba($color-primary, 0.8),
+      rgba($color-secondary, 0.8)
+    ),
+    url('../../img/Default.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .options {
+    background-color: rgba($color-primary-light, 0.8);
+    border: $color-primary-darker solid 4px;
+    padding: 5rem;
+    box-shadow: 0 0 10rem rgba($color-primary-darker, 0.5);
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: max-content 3fr;
+    grid-template-rows: repeat(1fr, 7);
+    gap: 5rem;
+
+    label {
+      font-size: 3rem;
+      color: $color-primary-darker;
+      font-weight: 700;
+    }
+
+    .options__background {
+      @include option;
+    }
+
+    input {
+      // selecting type number
+      &[type='number'] {
+        @include option;
+      }
+      &[type='file'] {
+        display: none;
+      }
+      &[type='radio'] {
+        margin-right: 1rem;
+        width: 2rem;
+        height: 2rem;
+        appearance: none;
+        border: 2px solid $color-primary-darker;
+        border-radius: 50%;
+        background-color: rgba($color-primary, 0.8);
+        cursor: pointer;
+        position: relative;
+        &:checked {
+          background-color: rgba($color-secondary, 0.8);
+        }
+      }
+    }
+  }
+}

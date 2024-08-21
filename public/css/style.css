@@ -1,13 +1,31 @@
-/* */
+/*
+// 0 - 600px:      Phone
+// 600 - 900px:    Tablet portrait
+// 900 - 1200px:   Tablet landscape
+// [1200 - 1800] is where our normal styles apply
+// 1800px + :      Big desktop
+
+// $breakpoint argument choices:
+// - phone
+// - tab-port
+// - tab-land
+// - big-desktop
+
+// ORDER: Base + typography > general layout + grid > page layout > components
+
+// 1em = 16px
+// */
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+}
 
 body {
   box-sizing: border-box;
@@ -15,48 +33,134 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-image: linear-gradient(to top, rgba(106, 89, 149, 0.8), rgba(134, 214, 195, 0.8)), url("../../img/Default.jpg");
   background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+}
 
-.home {
+nav .home {
+  position: absolute;
+  fill: rgba(106, 89, 149, 0.8);
+  top: 1%;
+  left: 1%;
+  width: 5rem;
+  height: 5rem;
+}
+nav .home:hover {
+  fill: #37295d;
+  cursor: pointer;
+}
+nav .home:active {
+  transform: scale(1.1) translateY(-0.2rem);
+}
+
+.main {
+  background-image: linear-gradient(to top, rgba(106, 89, 149, 0.8), rgba(134, 214, 195, 0.8)), url("../../img/Default.jpg");
   width: 100vw;
   height: 100vh;
   display: flex;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   justify-content: center;
-  align-items: center; }
-  .home__container {
-    background-color: #6A5995;
-    width: 50rem;
-    height: 50rem;
-    border-radius: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.4); }
-    .home__container--timer {
-      color: #86D6C3;
-      font-size: 12rem;
-      margin-bottom: 6rem;
-      text-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.4);
-      background-color: #4e3d7b;
-      padding: 2rem;
-      border-radius: 5px; }
-    .home__container__controls {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0.75rem; }
-      .home__container__controls > * {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        fill: #37295d;
-        height: 7rem;
-        width: 7rem; }
-        .home__container__controls > *:hover {
-          fill: #86D6C3;
-          cursor: pointer; }
-        .home__container__controls > *:active {
-          transform: scale(1.1) translateY(-5px); }
+  align-items: center;
+}
+.main__container {
+  background-color: #6A5995;
+  width: 50rem;
+  height: 50rem;
+  border-radius: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.4);
+}
+.main__container--timer {
+  color: #86D6C3;
+  font-size: 12rem;
+  margin-bottom: 6rem;
+  text-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.4);
+  background-color: #4e3d7b;
+  padding: 2rem;
+  border-radius: 5px;
+}
+.main__container__controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+.main__container__controls > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: #37295d;
+  height: 7rem;
+  width: 7rem;
+}
+.main__container__controls > *:hover {
+  fill: #86D6C3;
+  cursor: pointer;
+}
+.main__container__controls > *:active {
+  transform: scale(1.1) translateY(-5px);
+}
+
+.settings {
+  background-image: linear-gradient(to top, rgba(106, 89, 149, 0.8), rgba(134, 214, 195, 0.8)), url("../../img/Default.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.settings .options {
+  background-color: rgba(144, 122, 199, 0.8);
+  border: #37295d solid 4px;
+  padding: 5rem;
+  box-shadow: 0 0 10rem rgba(55, 41, 93, 0.5);
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: max-content 3fr;
+  grid-template-rows: repeat(1fr, 7);
+  gap: 5rem;
+}
+.settings .options label {
+  font-size: 3rem;
+  color: #37295d;
+  font-weight: 700;
+}
+.settings .options .options__background {
+  padding: 3rem;
+  border-radius: 5rem;
+  background-color: rgba(106, 89, 149, 0.8);
+  border: black solid 2px;
+  font-size: 3rem;
+}
+.settings .options input[type=number] {
+  padding: 3rem;
+  border-radius: 5rem;
+  background-color: rgba(106, 89, 149, 0.8);
+  border: black solid 2px;
+  font-size: 3rem;
+}
+.settings .options input[type=file] {
+  display: none;
+}
+.settings .options input[type=radio] {
+  margin-right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  appearance: none;
+  border: 2px solid #37295d;
+  border-radius: 50%;
+  background-color: rgba(106, 89, 149, 0.8);
+  cursor: pointer;
+  position: relative;
+}
+.settings .options input[type=radio]:checked {
+  background-color: rgba(134, 214, 195, 0.8);
+}
+
+/*# sourceMappingURL=style.css.map */

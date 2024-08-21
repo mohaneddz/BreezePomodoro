@@ -1,0 +1,19 @@
+nav {
+  .home {
+    position: absolute;
+    fill: rgba($color-primary, 0.8);
+    top: 1%;
+    left: 1%;
+    width: 5rem;
+    height: 5rem;
+
+    &:hover {
+      fill: $color-primary-darker;
+      cursor: pointer;
+    }
+
+    &:active {
+      transform: scale(1.1) translateY(-0.2rem);
+    }
+  }
+}

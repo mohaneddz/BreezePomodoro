@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="scripts/main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Template</title>
+  </head>
+  <body class="settings">
+    <!-- Menu -->
+    <nav class="settings">
+      <a href="./index.html">
+        <svg class="home icon">
+          <use xlink:href="img/sprites.svg#icon-home3"></use>
+        </svg>
+      </a>
+    </nav>
+
+    <!--  Options -->
+    <div class="options">
+      <label for="intervals">Number Of Intervals : </label>
+      <input type="number" name="intervals" />
+
+      <label for="focus">Focus duration : </label>
+      <input type="number" name="focus" />
+
+      <label for="rest">Rest duration : </label>
+      <input type="number" name="rest" />
+
+      <label for="break">Break duration : </label>
+      <input type="number" name="break" />
+
+      <label for="file-upload">Custom Background :
+      </label>
+      <input id="file-upload" type="file" />
+      <div class="options__background">&nbsp;</div>
+
+      <label for="blur">Blur Amount : </label>
+      <input type="range" name="blur" />
+
+      <label for="options__theme"> Theme : </label>
+      <div class="options__theme">
+        <label>
+          <input type="radio" name="theme" value="light" />
+          Lagoon
+        </label>
+        <label>
+          <input type="radio" name="theme" value="dark" />
+          Owl
+        </label>
+        <label>
+          <input type="radio" name="theme" value="dark" />
+          Monkai
+        </label>
+      </div>
+    </div>
+  </body>
+</html>
