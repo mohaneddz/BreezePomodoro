@@ -1,121 +1,159 @@
-// COLORS
-$color-primary: #6a5995;
-$color-primary-dark: #4e3d7b;
-$color-primary-darker: #37295d;
-$color-primary-light: #907ac7;
-$color-primary-lighter: #b9a3d0;
+:root {
+  /* Default Theme: LAGOON */
+  --color-primary: rgb(106, 89, 149);
+  --color-primary-rgb: 106, 89, 149;
+  --color-primary-dark: rgb(78, 61, 123);
+  --color-primary-dark-rgb: 78, 61, 123;
+  --color-primary-darker: rgb(55, 41, 93);
+  --color-primary-darker-rgb: 55, 41, 93;
+  --color-primary-light: rgb(144, 122, 199);
+  --color-primary-light-rgb: 144, 122, 199;
+  --color-primary-lighter: rgb(185, 163, 208);
+  --color-primary-lighter-rgb: 185, 163, 208;
 
-$color-secondary: #86d6c3;
-$color-secondary-dark: #5cb8a6;
-$color-secondary-darker: #3a8f7f;
-$color-secondary-light: #a3e9d7;
-$color-secondary-lighter: #c4f4e9;
+  --color-secondary: rgb(134, 214, 195);
+  --color-secondary-rgb: 134, 214, 195;
+  --color-secondary-dark: rgb(92, 184, 166);
+  --color-secondary-dark-rgb: 92, 184, 166;
+  --color-secondary-darker: rgb(58, 143, 127);
+  --color-secondary-darker-rgb: 58, 143, 127;
+  --color-secondary-light: rgb(163, 233, 215);
+  --color-secondary-light-rgb: 163, 233, 215;
+  --color-secondary-lighter: rgb(196, 244, 233);
+  --color-secondary-lighter-rgb: 196, 244, 233;
 
-$color-tertiary: #65768e;
-$color-tertiary-dark: #4a5a6e;
-$color-tertiary-darker: #2f3a4a;
+  --color-tertiary: rgb(101, 119, 142);
+  --color-tertiary-rgb: 101, 119, 142;
+  --color-tertiary-dark: rgb(74, 90, 110);
+  --color-tertiary-dark-rgb: 74, 90, 110;
+  --color-tertiary-darker: rgb(47, 58, 74);
+  --color-tertiary-darker-rgb: 47, 58, 74;
 
-$color-rest: #b7e4c7;
-$color-rest-dark: #8fc6a8;
-$color-rest-darker: #6aa98b;
-$color-rest-light: #d1f1d9;
-$color-rest-lighter: #e6f8ec;
+  --color-rest: rgb(183, 228, 199);
+  --color-rest-rgb: 183, 228, 199;
+  --color-rest-dark: rgb(143, 198, 168);
+  --color-rest-dark-rgb: 143, 198, 168;
+  --color-rest-darker: rgb(106, 169, 139);
+  --color-rest-darker-rgb: 106, 169, 139;
+  --color-rest-light: rgb(209, 241, 217);
+  --color-rest-light-rgb: 209, 241, 217;
+  --color-rest-lighter: rgb(230, 248, 236);
+  --color-rest-lighter-rgb: 230, 248, 236;
 
-$color-focus: #f67741;
-$color-focus-dark: #d85a1f;
-$color-focus-darker: #b63d00;
-$color-focus-light: #f9a06d;
-$color-focus-lighter: #fbc8a0;
+  --color-focus: rgb(246, 119, 65);
+  --color-focus-rgb: 246, 119, 65;
+  --color-focus-dark: rgb(216, 90, 31);
+  --color-focus-dark-rgb: 216, 90, 31;
+  --color-focus-darker: rgb(182, 61, 0);
+  --color-focus-darker-rgb: 182, 61, 0;
+  --color-focus-light: rgb(249, 160, 109);
+  --color-focus-light-rgb: 249, 160, 109;
+  --color-focus-lighter: rgb(251, 200, 160);
+  --color-focus-lighter-rgb: 251, 200, 160;
+}
 
-// THEMES
-$lagoon-theme: (
-  primary: #6a5995,
-  primary-dark: #4e3d7b,
-  primary-darker: #37295d,
-  primary-light: #907ac7,
-  primary-lighter: #b9a3d0,
+.monkai-theme {
+  --color-primary: rgb(169, 132, 103);
+  --color-primary-rgb: 169, 132, 103;
+  --color-primary-dark: rgb(139, 109, 79);
+  --color-primary-dark-rgb: 139, 109, 79;
+  --color-primary-darker: rgb(111, 86, 59);
+  --color-primary-darker-rgb: 111, 86, 59;
+  --color-primary-light: rgb(196, 168, 138);
+  --color-primary-light-rgb: 196, 168, 138;
+  --color-primary-lighter: rgb(215, 192, 164);
+  --color-primary-lighter-rgb: 215, 192, 164;
 
-  secondary: #86d6c3,
-  secondary-dark: #5cb8a6,
-  secondary-darker: #3a8f7f,
-  secondary-light: #a3e9d7,
-  secondary-lighter: #c4f4e9,
+  --color-secondary: rgb(107, 142, 35);
+  --color-secondary-rgb: 107, 142, 35;
+  --color-secondary-dark: rgb(79, 107, 26);
+  --color-secondary-dark-rgb: 79, 107, 26;
+  --color-secondary-darker: rgb(58, 79, 19);
+  --color-secondary-darker-rgb: 58, 79, 19;
+  --color-secondary-light: rgb(141, 191, 62);
+  --color-secondary-light-rgb: 141, 191, 62;
+  --color-secondary-lighter: rgb(176, 209, 95);
+  --color-secondary-lighter-rgb: 176, 209, 95;
 
-  tertiary: #65768e,
-  tertiary-dark: #4a5a6e,
-  tertiary-darker: #2f3a4a,
+  --color-tertiary: rgb(107, 107, 107);
+  --color-tertiary-rgb: 107, 107, 107;
+  --color-tertiary-dark: rgb(79, 79, 79);
+  --color-tertiary-dark-rgb: 79, 79, 79;
+  --color-tertiary-darker: rgb(58, 58, 58);
+  --color-tertiary-darker-rgb: 58, 58, 58;
 
-  rest: #b7e4c7,
-  rest-dark: #8fc6a8,
-  rest-darker: #6aa98b,
-  rest-light: #d1f1d9,
-  rest-lighter: #e6f8ec,
+  --color-rest: rgb(183, 183, 183);
+  --color-rest-rgb: 183, 183, 183;
+  --color-rest-dark: rgb(143, 143, 143);
+  --color-rest-dark-rgb: 143, 143, 143;
+  --color-rest-darker: rgb(106, 106, 106);
+  --color-rest-darker-rgb: 106, 106, 106;
+  --color-rest-light: rgb(209, 209, 209);
+  --color-rest-light-rgb: 209, 209, 209;
+  --color-rest-lighter: rgb(230, 230, 230);
+  --color-rest-lighter-rgb: 230, 230, 230;
 
-  focus: #f67741,
-  focus-dark: #d85a1f,
-  focus-darker: #b63d00,
-  focus-light: #f9a06d,
-  focus-lighter: #fbc8a0,
-);
+  --color-focus: rgb(194, 119, 49);
+  --color-focus-rgb: 194, 119, 49;
+  --color-focus-dark: rgb(168, 90, 31);
+  --color-focus-dark-rgb: 168, 90, 31;
+  --color-focus-darker: rgb(140, 61, 0);
+  --color-focus-darker-rgb: 140, 61, 0;
+  --color-focus-light: rgb(209, 143, 95);
+  --color-focus-light-rgb: 209, 143, 95;
+  --color-focus-lighter: rgb(230, 191, 160);
+  --color-focus-lighter-rgb: 230, 191, 160;
+}
 
-// MONKAI THEME ( brownish )
-$monkai-theme: (
-  primary: #a98467,
-  primary-dark: #8b6d4f,
-  primary-darker: #6f563b,
-  primary-light: #c4a88a,
-  primary-lighter: #d7c0a4,
+.owl-theme {
+  --color-primary: rgb(255, 214, 10);
+  --color-primary-rgb: 255, 214, 10;
+  --color-primary-dark: rgb(230, 193, 9);
+  --color-primary-dark-rgb: 230, 193, 9;
+  --color-primary-darker: rgb(191, 154, 7);
+  --color-primary-darker-rgb: 191, 154, 7;
+  --color-primary-light: rgb(255, 223, 78);
+  --color-primary-light-rgb: 255, 223, 78;
+  --color-primary-lighter: rgb(255, 229, 122);
+  --color-primary-lighter-rgb: 255, 229, 122;
 
-  secondary: #6b8e23,
-  secondary-dark: #4f6b1a,
-  secondary-darker: #3a4f13,
-  secondary-light: #8dbf3e,
-  secondary-lighter: #b0d15f,
+  --color-secondary: rgb(0, 53, 102);
+  --color-secondary-rgb: 0, 53, 102;
+  --color-secondary-dark: rgb(0, 43, 92);
+  --color-secondary-dark-rgb: 0, 43, 92;
+  --color-secondary-darker: rgb(0, 33, 74);
+  --color-secondary-darker-rgb: 0, 33, 74;
+  --color-secondary-light: rgb(0, 64, 123);
+  --color-secondary-light-rgb: 0, 64, 123;
+  --color-secondary-lighter: rgb(0, 80, 162);
+  --color-secondary-lighter-rgb: 0, 80, 162;
 
-  tertiary: #6b6b6b,
-  tertiary-dark: #4f4f4f,
-  tertiary-darker: #3a3a3a,
+  --color-tertiary: rgb(0, 8, 20);
+  --color-tertiary-rgb: 0, 8, 20;
+  --color-tertiary-dark: rgb(0, 6, 18);
+  --color-tertiary-dark-rgb: 0, 6, 18;
+  --color-tertiary-darker: rgb(0, 4, 15);
+  --color-tertiary-darker-rgb: 0, 4, 15;
 
-  rest: #b7b7b7,
-  rest-dark: #8f8f8f,
-  rest-darker: #6a6a6a,
-  rest-light: #d1d1d1,
-  rest-lighter: #e6e6e6,
+  --color-rest: rgb(114, 9, 183);
+  --color-rest-rgb: 114, 9, 183;
+  --color-rest-dark: rgb(95, 8, 160);
+  --color-rest-dark-rgb: 95, 8, 160;
+  --color-rest-darker: rgb(75, 6, 128);
+  --color-rest-darker-rgb: 75, 6, 128;
+  --color-rest-light: rgb(140, 45, 183);
+  --color-rest-light-rgb: 140, 45, 183;
+  --color-rest-lighter: rgb(164, 79, 199);
+  --color-rest-lighter-rgb: 164, 79, 199;
 
-  focus: #c27731,
-  focus-dark: #a85a1f,
-  focus-darker: #8c3d00,
-  focus-light: #d18f5f,
-  focus-lighter: #e6bfa0,
-);
-
-// DARK THEME, with yellow
-$owl-theme: (
-  primary: #ffd60a,
-  primary-dark: #e6c109,
-  primary-darker: #bf9a07,
-  primary-light: #ffdf4e,
-  primary-lighter: #ffe57a,
-
-  secondary: #003566,
-  secondary-dark: #002b5c,
-  secondary-darker: #00214a,
-  secondary-light: #00407b,
-  secondary-lighter: #0050a2,
-
-  tertiary: #000814,
-  tertiary-dark: #000612,
-  tertiary-darker: #00040f,
-
-  rest: #7209b7,
-  rest-dark: #5f08a0,
-  rest-darker: #4b0680,
-  rest-light: #8c2db7,
-  rest-lighter: #a44fc7,
-
-  focus: #ff792e,
-  focus-dark: #e65f1f,
-  focus-darker: #bf4400,
-  focus-light: #ff9e5f,
-  focus-lighter: #ffb88f,
-);
+  --color-focus: rgb(255, 121, 46);
+  --color-focus-rgb: 255, 121, 46;
+  --color-focus-dark: rgb(230, 95, 31);
+  --color-focus-dark-rgb: 230, 95, 31;
+  --color-focus-darker: rgb(191, 68, 0);
+  --color-focus-darker-rgb: 191, 68, 0;
+  --color-focus-light: rgb(255, 158, 95);
+  --color-focus-light-rgb: 255, 158, 95;
+  --color-focus-lighter: rgb(255, 184, 143);
+  --color-focus-lighter-rgb: 255, 184, 143;
+}

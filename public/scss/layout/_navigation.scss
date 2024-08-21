@@ -1,14 +1,14 @@
 nav {
   .home {
     position: absolute;
-    fill: rgba($color-primary, 0.8);
+    fill: rgba(var(--color-primary-rgb), 0.8);
     top: 1%;
     left: 1%;
     width: 5rem;
     height: 5rem;
 
     &:hover {
-      fill: $color-primary-darker;
+      fill: var(--color-primary-darker);
       cursor: pointer;
     }
 

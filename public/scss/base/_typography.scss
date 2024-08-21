@@ -7,13 +7,13 @@ body {
 .settings {
   label {
     font-size: 3rem;
-    color: $color-primary-darker;
+    color: var(--color-primary-darker);
     font-weight: 700;
     align-self: center;
   }
   .options__background {
     font-size: 3rem;
-    color: $color-primary-darker;
+    color: var(--color-primary-darker);
     font-weight: 300;
   }
 }

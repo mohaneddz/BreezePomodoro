@@ -2,8 +2,8 @@
   // Background
   background-image: linear-gradient(
       to top,
-      rgba($color-primary, 0.8),
-      rgba($color-secondary, 0.8)
+      rgba(var(--color-primary-rgb), 0.8),
+      rgba(var(--color-secondary-rgb), 0.8)
     ),
     url('../../img/Default.jpg');
   background-size: cover;
@@ -16,10 +16,10 @@
 
   .options {
     // Style
-    background-color: rgba($color-primary-light, 0.8);
-    border: $color-primary-darker solid 4px;
+    background-color: rgba(var(--color-primary-light-rgb), 0.8);
+    border: var(--color-primary-darker-rgb) solid 4px;
     padding: 5rem;
-    box-shadow: 0 0 10rem rgba($color-primary-darker, 0.5);
+    box-shadow: 0 0 10rem rgba(var(--color-primary-darker-rgb), 0.5);
     border-radius: 15px;
 
     // Grid Settings
@@ -43,7 +43,7 @@
       align-self: center;
     }
 
-    // TODO Add Custom Buttons to increase / Decrease using JS
+    // TODO Add Custom Buttons to increase / Decrease using JS https://www.youtube.com/watch?v=zCT7vRaXovk
     input {
       &[type='number'] {
         @include option;
@@ -62,7 +62,7 @@
         &::-webkit-slider-runnable-track {
           background: linear-gradient(
             to right,
-            $color-primary-dark var(--value, 50%),
+            var(--color-primary-dark) var(--value, 50%),
             white var(--value, 50%)
           );
           border-radius: 1rem; /* Smoother track edges */
@@ -74,13 +74,13 @@
           height: 2rem;
           width: 2rem;
           border-radius: 50%;
-          background: $color-primary-dark;
+          background: var(--color-primary-dark);
           cursor: pointer;
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Smoother border effect */
         }
 
         &::-moz-range-thumb {
-          background: $color-primary-dark;
+          background: var(--color-primary-dark);
           height: 2rem;
           width: 2rem;
           border-radius: 50%;
@@ -88,7 +88,7 @@
         }
 
         &::-moz-range-progress {
-          background: $color-primary-dark;
+          background: var(--color-primary-dark);
           height: 0.5rem; /* Match track height */
         }
 
@@ -103,12 +103,12 @@
         width: 2rem;
         height: 2rem;
         appearance: none;
-        border: 2px solid $color-primary;
+        border: 2px solid var(--color-primary);
         border-radius: 50%;
-        background-color: rgba($color-primary, 0.8);
+        background-color: rgba(var(--color-primary-rgb), 0.8);
         cursor: pointer;
         &:checked {
-          background-color: rgba($color-secondary, 0.8);
+          background-color: rgba(var(--color-secondary-rgb), 0.8);
         }
       }
     }

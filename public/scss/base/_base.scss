@@ -36,5 +36,7 @@ body {
 }
 
 ::selection {
-  background-color: $color-secondary;
+  background-color: var(--color-secondary);
 }
+
+// TODO - add colors to cursor https://www.youtube.com/shorts/aBNG-YGPVDE

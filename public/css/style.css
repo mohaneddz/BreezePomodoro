@@ -1,3 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+:root {
+  /* Default Theme: LAGOON */
+  --color-primary: rgb(106, 89, 149);
+  --color-primary-rgb: 106, 89, 149;
+  --color-primary-dark: rgb(78, 61, 123);
+  --color-primary-dark-rgb: 78, 61, 123;
+  --color-primary-darker: rgb(55, 41, 93);
+  --color-primary-darker-rgb: 55, 41, 93;
+  --color-primary-light: rgb(144, 122, 199);
+  --color-primary-light-rgb: 144, 122, 199;
+  --color-primary-lighter: rgb(185, 163, 208);
+  --color-primary-lighter-rgb: 185, 163, 208;
+  --color-secondary: rgb(134, 214, 195);
+  --color-secondary-rgb: 134, 214, 195;
+  --color-secondary-dark: rgb(92, 184, 166);
+  --color-secondary-dark-rgb: 92, 184, 166;
+  --color-secondary-darker: rgb(58, 143, 127);
+  --color-secondary-darker-rgb: 58, 143, 127;
+  --color-secondary-light: rgb(163, 233, 215);
+  --color-secondary-light-rgb: 163, 233, 215;
+  --color-secondary-lighter: rgb(196, 244, 233);
+  --color-secondary-lighter-rgb: 196, 244, 233;
+  --color-tertiary: rgb(101, 119, 142);
+  --color-tertiary-rgb: 101, 119, 142;
+  --color-tertiary-dark: rgb(74, 90, 110);
+  --color-tertiary-dark-rgb: 74, 90, 110;
+  --color-tertiary-darker: rgb(47, 58, 74);
+  --color-tertiary-darker-rgb: 47, 58, 74;
+  --color-rest: rgb(183, 228, 199);
+  --color-rest-rgb: 183, 228, 199;
+  --color-rest-dark: rgb(143, 198, 168);
+  --color-rest-dark-rgb: 143, 198, 168;
+  --color-rest-darker: rgb(106, 169, 139);
+  --color-rest-darker-rgb: 106, 169, 139;
+  --color-rest-light: rgb(209, 241, 217);
+  --color-rest-light-rgb: 209, 241, 217;
+  --color-rest-lighter: rgb(230, 248, 236);
+  --color-rest-lighter-rgb: 230, 248, 236;
+  --color-focus: rgb(246, 119, 65);
+  --color-focus-rgb: 246, 119, 65;
+  --color-focus-dark: rgb(216, 90, 31);
+  --color-focus-dark-rgb: 216, 90, 31;
+  --color-focus-darker: rgb(182, 61, 0);
+  --color-focus-darker-rgb: 182, 61, 0;
+  --color-focus-light: rgb(249, 160, 109);
+  --color-focus-light-rgb: 249, 160, 109;
+  --color-focus-lighter: rgb(251, 200, 160);
+  --color-focus-lighter-rgb: 251, 200, 160;
+}
+
+.monkai-theme {
+  --color-primary: rgb(169, 132, 103);
+  --color-primary-rgb: 169, 132, 103;
+  --color-primary-dark: rgb(139, 109, 79);
+  --color-primary-dark-rgb: 139, 109, 79;
+  --color-primary-darker: rgb(111, 86, 59);
+  --color-primary-darker-rgb: 111, 86, 59;
+  --color-primary-light: rgb(196, 168, 138);
+  --color-primary-light-rgb: 196, 168, 138;
+  --color-primary-lighter: rgb(215, 192, 164);
+  --color-primary-lighter-rgb: 215, 192, 164;
+  --color-secondary: rgb(107, 142, 35);
+  --color-secondary-rgb: 107, 142, 35;
+  --color-secondary-dark: rgb(79, 107, 26);
+  --color-secondary-dark-rgb: 79, 107, 26;
+  --color-secondary-darker: rgb(58, 79, 19);
+  --color-secondary-darker-rgb: 58, 79, 19;
+  --color-secondary-light: rgb(141, 191, 62);
+  --color-secondary-light-rgb: 141, 191, 62;
+  --color-secondary-lighter: rgb(176, 209, 95);
+  --color-secondary-lighter-rgb: 176, 209, 95;
+  --color-tertiary: rgb(107, 107, 107);
+  --color-tertiary-rgb: 107, 107, 107;
+  --color-tertiary-dark: rgb(79, 79, 79);
+  --color-tertiary-dark-rgb: 79, 79, 79;
+  --color-tertiary-darker: rgb(58, 58, 58);
+  --color-tertiary-darker-rgb: 58, 58, 58;
+  --color-rest: rgb(183, 183, 183);
+  --color-rest-rgb: 183, 183, 183;
+  --color-rest-dark: rgb(143, 143, 143);
+  --color-rest-dark-rgb: 143, 143, 143;
+  --color-rest-darker: rgb(106, 106, 106);
+  --color-rest-darker-rgb: 106, 106, 106;
+  --color-rest-light: rgb(209, 209, 209);
+  --color-rest-light-rgb: 209, 209, 209;
+  --color-rest-lighter: rgb(230, 230, 230);
+  --color-rest-lighter-rgb: 230, 230, 230;
+  --color-focus: rgb(194, 119, 49);
+  --color-focus-rgb: 194, 119, 49;
+  --color-focus-dark: rgb(168, 90, 31);
+  --color-focus-dark-rgb: 168, 90, 31;
+  --color-focus-darker: rgb(140, 61, 0);
+  --color-focus-darker-rgb: 140, 61, 0;
+  --color-focus-light: rgb(209, 143, 95);
+  --color-focus-light-rgb: 209, 143, 95;
+  --color-focus-lighter: rgb(230, 191, 160);
+  --color-focus-lighter-rgb: 230, 191, 160;
+}
+
+.owl-theme {
+  --color-primary: rgb(255, 214, 10);
+  --color-primary-rgb: 255, 214, 10;
+  --color-primary-dark: rgb(230, 193, 9);
+  --color-primary-dark-rgb: 230, 193, 9;
+  --color-primary-darker: rgb(191, 154, 7);
+  --color-primary-darker-rgb: 191, 154, 7;
+  --color-primary-light: rgb(255, 223, 78);
+  --color-primary-light-rgb: 255, 223, 78;
+  --color-primary-lighter: rgb(255, 229, 122);
+  --color-primary-lighter-rgb: 255, 229, 122;
+  --color-secondary: rgb(0, 53, 102);
+  --color-secondary-rgb: 0, 53, 102;
+  --color-secondary-dark: rgb(0, 43, 92);
+  --color-secondary-dark-rgb: 0, 43, 92;
+  --color-secondary-darker: rgb(0, 33, 74);
+  --color-secondary-darker-rgb: 0, 33, 74;
+  --color-secondary-light: rgb(0, 64, 123);
+  --color-secondary-light-rgb: 0, 64, 123;
+  --color-secondary-lighter: rgb(0, 80, 162);
+  --color-secondary-lighter-rgb: 0, 80, 162;
+  --color-tertiary: rgb(0, 8, 20);
+  --color-tertiary-rgb: 0, 8, 20;
+  --color-tertiary-dark: rgb(0, 6, 18);
+  --color-tertiary-dark-rgb: 0, 6, 18;
+  --color-tertiary-darker: rgb(0, 4, 15);
+  --color-tertiary-darker-rgb: 0, 4, 15;
+  --color-rest: rgb(114, 9, 183);
+  --color-rest-rgb: 114, 9, 183;
+  --color-rest-dark: rgb(95, 8, 160);
+  --color-rest-dark-rgb: 95, 8, 160;
+  --color-rest-darker: rgb(75, 6, 128);
+  --color-rest-darker-rgb: 75, 6, 128;
+  --color-rest-light: rgb(140, 45, 183);
+  --color-rest-light-rgb: 140, 45, 183;
+  --color-rest-lighter: rgb(164, 79, 199);
+  --color-rest-lighter-rgb: 164, 79, 199;
+  --color-focus: rgb(255, 121, 46);
+  --color-focus-rgb: 255, 121, 46;
+  --color-focus-dark: rgb(230, 95, 31);
+  --color-focus-dark-rgb: 230, 95, 31;
+  --color-focus-darker: rgb(191, 68, 0);
+  --color-focus-darker-rgb: 191, 68, 0;
+  --color-focus-light: rgb(255, 158, 95);
+  --color-focus-light-rgb: 255, 158, 95;
+  --color-focus-lighter: rgb(255, 184, 143);
+  --color-focus-lighter-rgb: 255, 184, 143;
+}
+
 /*
 // 0 - 600px:      Phone
 // 600 - 900px:    Tablet portrait
@@ -15,7 +164,6 @@
 
 // 1em = 16px
 // */
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 *,
 *::after,
 *::before {
@@ -39,7 +187,7 @@ body {
 }
 
 ::selection {
-  background-color: #86d6c3;
+  background-color: var(--color-secondary);
 }
 
 body {
@@ -48,26 +196,26 @@ body {
 
 .settings label {
   font-size: 3rem;
-  color: #37295d;
+  color: var(--color-primary-darker);
   font-weight: 700;
   align-self: center;
 }
 .settings .options__background {
   font-size: 3rem;
-  color: #37295d;
+  color: var(--color-primary-darker);
   font-weight: 300;
 }
 
 nav .home {
   position: absolute;
-  fill: rgba(106, 89, 149, 0.8);
+  fill: rgba(var(--color-primary-rgb), 0.8);
   top: 1%;
   left: 1%;
   width: 5rem;
   height: 5rem;
 }
 nav .home:hover {
-  fill: #37295d;
+  fill: var(--color-primary-darker);
   cursor: pointer;
 }
 nav .home:active {
@@ -75,7 +223,7 @@ nav .home:active {
 }
 
 .main {
-  background-image: linear-gradient(to top, rgba(106, 89, 149, 0.8), rgba(134, 214, 195, 0.8)), url("../../img/Default.jpg");
+  background-image: linear-gradient(to top, rgba(var(--color-primary-rgb), 0.8), rgba(var(--color-secondary-rgb), 0.8)), url("../../img/Default.jpg");
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -89,15 +237,15 @@ nav .home:active {
 .main__title {
   font-size: 15rem;
   font-weight: 900;
-  color: #f67741;
+  color: var(--color-focus);
   text-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.4);
   -webkit-text-stroke: 2px rgba(0, 0, 0, 0.3);
   margin-bottom: 2rem;
-  text-decoration: underline overline 5px #f67741;
+  text-decoration: underline overline 5px var(--color-focus);
   margin-top: -2rem;
 }
 .main__container {
-  background-color: #6a5995;
+  background-color: var(--color-primary);
   width: 55rem;
   height: 55rem;
   border-radius: 500px;
@@ -108,11 +256,11 @@ nav .home:active {
   box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.4);
 }
 .main__container--timer {
-  color: #86d6c3;
+  color: var(--color-secondary);
   font-size: 12rem;
   margin-bottom: 2rem;
   text-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.4);
-  background-color: #4e3d7b;
+  background-color: var(--color-primary-dark);
   padding: 2rem;
   border-radius: 5px;
 }
@@ -127,12 +275,12 @@ nav .home:active {
   display: flex;
   justify-content: center;
   align-items: center;
-  fill: #37295d;
+  fill: var(--color-primary-darker);
   height: 7rem;
   width: 7rem;
 }
 .main__container__controls > *:hover {
-  fill: #86d6c3;
+  fill: var(--color-secondary);
   cursor: pointer;
 }
 .main__container__controls > *:active {
@@ -145,7 +293,7 @@ nav .home:active {
 }
 
 .settings {
-  background-image: linear-gradient(to top, rgba(106, 89, 149, 0.8), rgba(134, 214, 195, 0.8)), url("../../img/Default.jpg");
+  background-image: linear-gradient(to top, rgba(var(--color-primary-rgb), 0.8), rgba(var(--color-secondary-rgb), 0.8)), url("../../img/Default.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -154,10 +302,10 @@ nav .home:active {
   align-items: center;
 }
 .settings .options {
-  background-color: rgba(144, 122, 199, 0.8);
-  border: #37295d solid 4px;
+  background-color: rgba(var(--color-primary-light-rgb), 0.8);
+  border: var(--color-primary-darker-rgb) solid 4px;
   padding: 5rem;
-  box-shadow: 0 0 10rem rgba(55, 41, 93, 0.5);
+  box-shadow: 0 0 10rem rgba(var(--color-primary-darker-rgb), 0.5);
   border-radius: 15px;
   display: grid;
   grid-template-columns: max-content 3fr;
@@ -167,7 +315,7 @@ nav .home:active {
 .settings .options__background {
   padding: 3rem;
   border-radius: 5rem;
-  background-color: rgba(106, 89, 149, 0.8);
+  background-color: rgba(var(--color-primary-rgb), 0.8);
   border: black solid 2px;
   font-size: 3rem;
   text-align: center;
@@ -185,7 +333,7 @@ nav .home:active {
 .settings .options input[type=number] {
   padding: 3rem;
   border-radius: 5rem;
-  background-color: rgba(106, 89, 149, 0.8);
+  background-color: rgba(var(--color-primary-rgb), 0.8);
   border: black solid 2px;
   font-size: 3rem;
   appearance: textfield;
@@ -200,7 +348,7 @@ nav .home:active {
   background: none;
 }
 .settings .options input[type=range]::-webkit-slider-runnable-track {
-  background: linear-gradient(to right, #4e3d7b var(--value, 50%), white var(--value, 50%));
+  background: linear-gradient(to right, var(--color-primary-dark) var(--value, 50%), white var(--value, 50%));
   border-radius: 1rem; /* Smoother track edges */
   height: 0.5rem; /* Track height */
 }
@@ -209,19 +357,19 @@ nav .home:active {
   height: 2rem;
   width: 2rem;
   border-radius: 50%;
-  background: #4e3d7b;
+  background: var(--color-primary-dark);
   cursor: pointer;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Smoother border effect */
 }
 .settings .options input[type=range]::-moz-range-thumb {
-  background: #4e3d7b;
+  background: var(--color-primary-dark);
   height: 2rem;
   width: 2rem;
   border-radius: 50%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Smoother border effect */
 }
 .settings .options input[type=range]::-moz-range-progress {
-  background: #4e3d7b;
+  background: var(--color-primary-dark);
   height: 0.5rem; /* Match track height */
 }
 .settings .options input[type=range]::-moz-range-track {
@@ -234,13 +382,13 @@ nav .home:active {
   width: 2rem;
   height: 2rem;
   appearance: none;
-  border: 2px solid #6a5995;
+  border: 2px solid var(--color-primary);
   border-radius: 50%;
-  background-color: rgba(106, 89, 149, 0.8);
+  background-color: rgba(var(--color-primary-rgb), 0.8);
   cursor: pointer;
 }
 .settings .options input[type=radio]:checked {
-  background-color: rgba(134, 214, 195, 0.8);
+  background-color: rgba(var(--color-secondary-rgb), 0.8);
 }
 
 /*# sourceMappingURL=style.css.map */

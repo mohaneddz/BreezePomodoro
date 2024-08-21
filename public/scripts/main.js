@@ -110,5 +110,5 @@ function focustime() {
     title.style.textDecorationColor = 'var(--color-focus)';
 }
 
-focustime()
+// focustime()
 // OPTIONS

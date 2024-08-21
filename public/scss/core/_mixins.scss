@@ -2,7 +2,7 @@
 @mixin option{
   padding: 3rem;
   border-radius: 5rem;
-  background-color: rgba($color-primary, 0.8);
+  background-color: rgba(var(--color-primary-rgb), 0.8);
   border: black solid 2px;
   font-size: 3rem;
 }
