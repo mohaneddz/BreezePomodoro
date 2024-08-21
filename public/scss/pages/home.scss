@@ -12,14 +12,14 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  
+
   justify-content: center;
   align-items: center;
 
   &__container {
     background-color: $color-primary;
-    width: 50rem;
-    height: 50rem;
+    width: 55rem;
+    height: 55rem;
     border-radius: 500px;
     display: flex;
     flex-direction: column;

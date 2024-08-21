@@ -35,7 +35,6 @@ body {
   // }
 }
 
-// ::selection {
-//   // background-color: $color-primary;
-//   // color: $color-white;
-// }
+::selection {
+  background-color: $color-secondary;
+}

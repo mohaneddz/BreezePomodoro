@@ -15,6 +15,7 @@
 
 // 1em = 16px
 // */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 *,
 *::after,
 *::before {
@@ -35,6 +36,26 @@ body {
   overflow: hidden;
   background-size: cover;
   background-attachment: fixed;
+}
+
+::selection {
+  background-color: #86D6C3;
+}
+
+body {
+  font-family: "Ubuntu Mono", monospace;
+}
+
+.settings label {
+  font-size: 3rem;
+  color: #37295d;
+  font-weight: 700;
+  align-self: center;
+}
+.settings .options__background {
+  font-size: 3rem;
+  color: #37295d;
+  font-weight: 300;
 }
 
 nav .home {
@@ -66,8 +87,8 @@ nav .home:active {
 }
 .main__container {
   background-color: #6A5995;
-  width: 50rem;
-  height: 50rem;
+  width: 55rem;
+  height: 55rem;
   border-radius: 500px;
   display: flex;
   flex-direction: column;
@@ -123,20 +144,26 @@ nav .home:active {
   border-radius: 15px;
   display: grid;
   grid-template-columns: max-content 3fr;
-  grid-template-rows: repeat(1fr, 7);
+  grid-template-rows: repeat(7, 1fr);
   gap: 5rem;
 }
-.settings .options label {
-  font-size: 3rem;
-  color: #37295d;
-  font-weight: 700;
-}
-.settings .options .options__background {
+.settings .options__background {
   padding: 3rem;
   border-radius: 5rem;
   background-color: rgba(106, 89, 149, 0.8);
   border: black solid 2px;
   font-size: 3rem;
+  text-align: center;
+  cursor: pointer;
+}
+.settings .options__background:hover {
+  filter: brightness(90%);
+}
+.settings .options__background:active {
+  filter: brightness(70%);
+}
+.settings .options__theme {
+  align-self: center;
 }
 .settings .options input[type=number] {
   padding: 3rem;
@@ -144,20 +171,56 @@ nav .home:active {
   background-color: rgba(106, 89, 149, 0.8);
   border: black solid 2px;
   font-size: 3rem;
+  appearance: textfield;
 }
 .settings .options input[type=file] {
   display: none;
+}
+.settings .options input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background: none;
+}
+.settings .options input[type=range]::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, #4e3d7b var(--value, 50%), white var(--value, 50%));
+  border-radius: 1rem; /* Smoother track edges */
+  height: 0.5rem; /* Track height */
+}
+.settings .options input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background: #4e3d7b;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Smoother border effect */
+}
+.settings .options input[type=range]::-moz-range-thumb {
+  background: #4e3d7b;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Smoother border effect */
+}
+.settings .options input[type=range]::-moz-range-progress {
+  background: #4e3d7b;
+  height: 0.5rem; /* Match track height */
+}
+.settings .options input[type=range]::-moz-range-track {
+  background: white;
+  height: 0.5rem; /* Match track height */
+  border-radius: 1rem; /* Smoother track edges */
 }
 .settings .options input[type=radio] {
   margin-right: 1rem;
   width: 2rem;
   height: 2rem;
   appearance: none;
-  border: 2px solid #37295d;
+  border: 2px solid #6A5995;
   border-radius: 50%;
   background-color: rgba(106, 89, 149, 0.8);
   cursor: pointer;
-  position: relative;
 }
 .settings .options input[type=radio]:checked {
   background-color: rgba(134, 214, 195, 0.8);

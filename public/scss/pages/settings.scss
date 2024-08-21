@@ -15,44 +15,98 @@
   align-items: center;
 
   .options {
+    // Style
     background-color: rgba($color-primary-light, 0.8);
     border: $color-primary-darker solid 4px;
     padding: 5rem;
     box-shadow: 0 0 10rem rgba($color-primary-darker, 0.5);
     border-radius: 15px;
+
+    // Grid Settings
     display: grid;
     grid-template-columns: max-content 3fr;
-    grid-template-rows: repeat(1fr, 7);
+    grid-template-rows: repeat(7, 1fr);
     gap: 5rem;
 
-    label {
-      font-size: 3rem;
-      color: $color-primary-darker;
-      font-weight: 700;
-    }
-
-    .options__background {
+    &__background {
       @include option;
+      text-align: center;
+      cursor: pointer;
+      &:hover {
+        filter: brightness(90%);
+      }
+      &:active {
+        filter: brightness(70%);
+      }
+    }
+    &__theme {
+      align-self: center;
     }
 
+    // TODO Add Custom Buttons to increase / Decrease using JS
     input {
-      // selecting type number
       &[type='number'] {
         @include option;
+        appearance: textfield;
       }
+
       &[type='file'] {
         display: none;
+      }
+      &[type='range'] {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        background: none;
+
+        &::-webkit-slider-runnable-track {
+          background: linear-gradient(
+            to right,
+            $color-primary-dark var(--value, 50%),
+            white var(--value, 50%)
+          );
+          border-radius: 1rem; /* Smoother track edges */
+          height: 0.5rem; /* Track height */
+        }
+
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          height: 2rem;
+          width: 2rem;
+          border-radius: 50%;
+          background: $color-primary-dark;
+          cursor: pointer;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Smoother border effect */
+        }
+
+        &::-moz-range-thumb {
+          background: $color-primary-dark;
+          height: 2rem;
+          width: 2rem;
+          border-radius: 50%;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Smoother border effect */
+        }
+
+        &::-moz-range-progress {
+          background: $color-primary-dark;
+          height: 0.5rem; /* Match track height */
+        }
+
+        &::-moz-range-track {
+          background: white;
+          height: 0.5rem; /* Match track height */
+          border-radius: 1rem; /* Smoother track edges */
+        }
       }
       &[type='radio'] {
         margin-right: 1rem;
         width: 2rem;
         height: 2rem;
         appearance: none;
-        border: 2px solid $color-primary-darker;
+        border: 2px solid $color-primary;
         border-radius: 50%;
         background-color: rgba($color-primary, 0.8);
         cursor: pointer;
-        position: relative;
         &:checked {
           background-color: rgba($color-secondary, 0.8);
         }
