@@ -39,7 +39,7 @@ body {
 }
 
 ::selection {
-  background-color: #86D6C3;
+  background-color: #86d6c3;
 }
 
 body {
@@ -84,9 +84,20 @@ nav .home:active {
   background-attachment: fixed;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+.main__title {
+  font-size: 15rem;
+  font-weight: 900;
+  color: #f67741;
+  text-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.4);
+  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.3);
+  margin-bottom: 2rem;
+  text-decoration: underline overline 5px #f67741;
+  margin-top: -2rem;
 }
 .main__container {
-  background-color: #6A5995;
+  background-color: #6a5995;
   width: 55rem;
   height: 55rem;
   border-radius: 500px;
@@ -97,9 +108,9 @@ nav .home:active {
   box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.4);
 }
 .main__container--timer {
-  color: #86D6C3;
+  color: #86d6c3;
   font-size: 12rem;
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
   text-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.4);
   background-color: #4e3d7b;
   padding: 2rem;
@@ -110,6 +121,7 @@ nav .home:active {
   justify-content: center;
   align-items: center;
   gap: 0.75rem;
+  flex-wrap: wrap;
 }
 .main__container__controls > * {
   display: flex;
@@ -120,11 +132,16 @@ nav .home:active {
   width: 7rem;
 }
 .main__container__controls > *:hover {
-  fill: #86D6C3;
+  fill: #86d6c3;
   cursor: pointer;
 }
 .main__container__controls > *:active {
   transform: scale(1.1) translateY(-5px);
+}
+.main__container__controls--play {
+  height: 10rem;
+  width: 10rem;
+  width: 100%;
 }
 
 .settings {
@@ -217,7 +234,7 @@ nav .home:active {
   width: 2rem;
   height: 2rem;
   appearance: none;
-  border: 2px solid #6A5995;
+  border: 2px solid #6a5995;
   border-radius: 50%;
   background-color: rgba(106, 89, 149, 0.8);
   cursor: pointer;
