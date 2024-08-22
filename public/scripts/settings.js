@@ -2,7 +2,7 @@
 
 import * as df from './config.js';
 
-// select by id
+// DOM Elements //////////////////////////////////////////////////////
 const intervals = document.getElementById('intervals');
 const focus = document.getElementById('focus');
 const rest = document.getElementById('rest');
@@ -15,15 +15,16 @@ const fields = [focus, rest];
 const backgroundImage = document.getElementById('background');
 let theme = localStorage.getItem('theme') || df.DEFAULT_THEME;
 const root = document.documentElement;
-
 df.setTheme(localStorage.getItem('theme') || df.DEFAULT_THEME);
 
+// Functions /////////////////////////////////////////////////////////
+
+/**
+ * Initialize the settings page with the values from local storage
+ * or the default values if no values are stored.
+ * @returns {void}
+ */
 function init_settings() {
-	/**
-	 * Initialize the settings page with the values from local storage
-	 * or the default values if no values are stored.
-	 * @returns {void}
-	 */
 	let imageUrl = localStorage.getItem('backgroundImage') || df.DEFAULT_BACKGROUND;
 
 	let _focus = localStorage.getItem('focus') || df.DEFAULT_FOCUS_TIME;
@@ -43,6 +44,11 @@ function init_settings() {
 	else if (theme === 'Monkai') themeRadioButtons[2].checked = true;
 }
 
+/**
+ * 	* Convert the time in milliseconds to a string in the format HH:MM:SS.
+ * @param {number} time - The time in milliseconds.
+ * @returns {string} The formatted time
+ */
 function get_time_setting(time) {
 	let seconds = Math.floor((time / 1000) % 60);
 	if (time > 3600 * 1000) {
@@ -58,19 +64,12 @@ function get_time_setting(time) {
 	}
 }
 
-reset.addEventListener('click', (e) => {
-	e.preventDefault();
-	localStorage.setItem('intervals', df.DEFAULT_MAX_ROUNDS);
-	localStorage.setItem('focus', df.DEFAULT_FOCUS_TIME);
-	localStorage.setItem('rest', df.DEFAULT_REST_TIME);
-	localStorage.setItem('blur', df.DEFAULT_BLUR);
-	localStorage.setItem('theme', df.DEFAULT_THEME);
-	localStorage.setItem('backgroundImage', df.DEFAULT_BACKGROUND);
-	df.setbackground(df.DEFAULT_BACKGROUND);
-	init_settings();
-});
-
-apply.addEventListener('click', (e) => {
+/**
+ * Apply the settings to the local storage.
+ * @param {Event} e - The event object.
+ * @returns {void}
+ */
+function apply_settings(e) {
 	// store values in local storage
 	let imageUrl = localStorage.getItem('backgroundImage') || df.DEFAULT_BACKGROUND;
 
@@ -89,33 +88,63 @@ apply.addEventListener('click', (e) => {
 	df.setTheme(theme);
 	df.setblur(blur.value);
 	// back to the index
-});
+}
 
-// Setting the error message
-fields.forEach((field) => {
-	field.addEventListener('submit', function (event) {
-		const duration = focus.value;
-		try {
-			parse_duration(duration); // Re-validate on form submission
-		} catch (err) {
-			event.preventDefault(); // Prevent form submission if invalid
-		}
-	});
+/**
+ * Reset the settings to the default values.
+ * @param {Event} e - The event object.
+ * @returns {void}
+ * */
+function reset_settings(e) {
+	e.preventDefault();
+	localStorage.setItem('intervals', df.DEFAULT_MAX_ROUNDS);
+	localStorage.setItem('focus', df.DEFAULT_FOCUS_TIME);
+	localStorage.setItem('rest', df.DEFAULT_REST_TIME);
+	localStorage.setItem('blur', df.DEFAULT_BLUR);
+	localStorage.setItem('theme', df.DEFAULT_THEME);
+	localStorage.setItem('backgroundImage', df.DEFAULT_BACKGROUND);
+	df.setbackground(df.DEFAULT_BACKGROUND);
+	init_settings();
+}
 
-	field.addEventListener('input', function () {
-		const duration = this.value;
+/**
+ * Prevent the form from submitting if the time format is invalid.
+ * @param {Event} e - The event object.
+ * @returns {void}
+ * */
+function prevent(e) {
+	const duration = focus.value;
+	try {
+		parse_duration(duration);
+	} catch (err) {
+		e.preventDefault();
+	}
+}
 
-		try {
-			parse_duration(duration); // Try to parse the duration
-			this.setCustomValidity(''); // Clear any previous invalid state
-			errorMessage.style.display = 'none'; // Hide error message
-		} catch (err) {
-			this.setCustomValidity('Invalid time format'); // Set the field as invalid
-			errorMessage.style.display = 'inline'; // Show error message
-		}
-	});
-});
+/**
+ *	* Show an error message if the time format is invalid.
+ * @param {Event} e - The event object.
+ * 	* @returns {void}
+ */
+function show_msg(e) {
+	const duration = this.value;
 
+	try {
+		parse_duration(duration); // Try to parse the duration
+		this.setCustomValidity(''); // Clear any previous invalid state
+		errorMessage.style.display = 'none'; // Hide error message
+	} catch (err) {
+		this.setCustomValidity('Invalid time format'); // Set the field as invalid
+		errorMessage.style.display = 'inline'; // Show error message
+	}
+}
+
+/**
+ * Parse the duration string in the format HH:MM:SS.
+ * @param {string} duration - The duration string.
+ * @returns {number} The duration in milliseconds.
+ * @throws {Error} If the duration string is invalid.
+ * */
 function parse_duration(duration) {
 	const timeFormat = /^(\d+)(?::([0-5]?\d))?(?::([0-5]?\d))?$/;
 
@@ -137,8 +166,13 @@ function parse_duration(duration) {
 	return (hour * 3600 + min * 60 + sec) * 1000;
 }
 
-backgroundImage.addEventListener('change', function (event) {
-	const file = event.target.files[0];
+/**
+ * Resize the background image to fit the screen.
+ * @param {Event} e - The event object.
+ * @returns {void}
+ * */
+function reize_background(e) {
+	const file = e.target.files[0];
 
 	if (file) {
 		const reader = new FileReader();
@@ -191,9 +225,19 @@ backgroundImage.addEventListener('change', function (event) {
 
 		reader.readAsDataURL(file);
 	}
+}
+
+// Event Listeners //////////////////////////////////////////////////////
+
+// Setting the error message
+fields.forEach((field) => {
+	field.addEventListener('submit', prevent);
+	field.addEventListener('input', show_msg);
 });
 
+reset.addEventListener('click', reset_settings);
+apply.addEventListener('click', apply_settings);
+backgroundImage.addEventListener('change', reize_background);
 
-
-// init main
+// init main //////////////////////////////////////////////////////
 init_settings();

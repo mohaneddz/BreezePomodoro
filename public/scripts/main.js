@@ -27,6 +27,10 @@ let round;
 let rest;
 
 // Basic Functions ////////////////////////////////////
+/**
+ * Toggle the play icon between play and pause.
+ * @returns {void}
+ */
 function toggle_play_icon() {
 	playIcon.setAttributeNS(
 		'http://www.w3.org/1999/xlink',
@@ -36,11 +40,20 @@ function toggle_play_icon() {
 	running ? playtimer() : stoptimer();
 }
 
+/**
+ * Toggle the running state of the timer.
+ * @returns {void}
+ */
 function toggle_running() {
 	running = !running;
 	toggle_play_icon();
 }
 
+/**
+ * Update the time displayed on the timer.
+ * @param {number} time - The time in milliseconds.
+ * @returns {void}
+ */
 function updatetime(time) {
 	if (time > 3600 * 1000) {
 		hours = time / 1000 / 60 / 60;
@@ -60,6 +73,11 @@ function updatetime(time) {
 	}
 }
 
+/**
+ * Play a sound effect.
+ * @param {string} sound - The name of the sound file.
+ * @returns {void}
+ * */
 function play_sound(sound) {
 	const audio = new Audio(`ost/${sound}.wav`);
 	if (sound === 'tick') audio.volume = 0.05;
@@ -67,6 +85,11 @@ function play_sound(sound) {
 	audio.play();
 }
 
+/**
+ * 	Decrease the time by 1 second.
+ * 	If the time is less than or equal to 0, move to the next round.
+ * @returns {void}
+ */
 function decreaseTime() {
 	if (time <= 0) {
 		next();
@@ -78,12 +101,20 @@ function decreaseTime() {
 	play_sound('tick');
 }
 
+/**
+ * Reset the timer to the current focus or rest time.
+ * @returns {void}
+ * */
 function reset() {
 	time = rest ? localStorage.getItem('rest') : localStorage.getItem('focus');
 	updatetime(time);
 	stoptimer();
 }
 
+/**
+ * Reset the timer to the initial state.
+ * @returns {void}
+ * */
 function full_reset() {
 	round = 1;
 	setround(round);
@@ -92,6 +123,10 @@ function full_reset() {
 	focus_theme();
 }
 
+/**
+ * Save the current state to local storage.
+ * @returns {void}
+ * */
 function save() {
 	localStorage.setItem('curr_time', time);
 	localStorage.setItem('round', round);
@@ -99,12 +134,19 @@ function save() {
 }
 
 // Timer Controls ////////////////////////////////////
-
+/**
+ * Start the timer.
+ * @returns {void}
+ */
 function playtimer() {
 	if (!interval) interval = window.setInterval(decreaseTime, 1000);
 	playIcon.style.fill = rest ? 'var(--color-rest)' : 'var(--color-focus)';
 }
 
+/**
+ *	Stop the timer.
+ * @returns {void}
+ */
 function stoptimer() {
 	if (!interval) {
 		return;
@@ -116,7 +158,11 @@ function stoptimer() {
 }
 
 // Playback Controls ////////////////////////////////////
-
+/**
+ * Move to the next round.
+ * If the current round is the last round, play a different sound.
+ * @returns {void}
+ */
 function next() {
 	if (round >= max_rounds && rest) {
 		round = 1;
@@ -133,6 +179,10 @@ function next() {
 	else play_sound('mid-high');
 }
 
+/**
+ * Move to the previous round.
+ * @returns {void}
+ * */
 function back() {
 	if (round > 1 || rest) {
 		rest = !rest;
@@ -147,19 +197,30 @@ function back() {
 }
 
 // Theme Functions ////////////////////////////////////
-
+/**
+ * Apply the rest theme.
+ * @returns {void}
+ */
 function rest_theme() {
 	title.textContent = 'Rest';
 	title.style.color = 'var(--color-rest)';
 	title.style.textDecorationColor = 'var(--color-rest)';
 }
 
+/**
+ * Apply the focus theme.
+ * @returns {void}
+ * */
 function focus_theme() {
 	title.textContent = 'Focus';
 	title.style.color = 'var(--color-focus)';
 	title.style.textDecorationColor = 'var(--color-focus)';
 }
 
+/**
+ * Reset the theme to the default focus theme.
+ * @returns {void}
+ * 	*/
 function resettheme() {
 	playIcon.style.fill = 'var(--color-primary-darker)';
 }
@@ -167,7 +228,6 @@ function resettheme() {
 function setround(round) {
 	roundCounter.textContent = `Round ${round} of ${max_rounds}`;
 }
-
 
 // Event Listeners
 counter.addEventListener('click', full_reset);
@@ -177,6 +237,11 @@ nextbtn.addEventListener('click', next);
 backbtn.addEventListener('click', back);
 settings.addEventListener('click', save);
 
+// Initialisation ////////////////////////////////////
+/**
+ * Initialise the main timer.
+ * @returns {void}
+ * */
 function init_main() {
 	// Set initial values from local storage, otherwise use defaults
 	max_rounds = localStorage.getItem('intervals') || df.DEFAULT_MAX_ROUNDS;

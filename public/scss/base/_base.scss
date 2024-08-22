@@ -8,6 +8,23 @@
 
 html {
   font-size: 50%; //
+
+  @media (max-width: 1200px) {
+    font-size: 45%; // Adjust font size for large screens
+  }
+
+  @media (max-width: 992px) {
+    font-size: 40%; // Adjust font size for medium screens
+  }
+
+  @media (max-width: 768px) {
+    font-size: 35%; // Adjust font size for small screens
+  }
+
+  @media (max-width: 576px) {
+    font-size: 25%; // Adjust font size for extra small screens
+  }
+
 }
 body {
   box-sizing: border-box;
