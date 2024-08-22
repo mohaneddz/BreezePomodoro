@@ -1,4 +1,4 @@
-# Wlcome to BreezePomodoro ⏲️
+# Welcome to BreezePomodoro ⏲️
 
 ## Introdcution
 
