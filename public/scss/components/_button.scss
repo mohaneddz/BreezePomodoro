@@ -1,0 +1,19 @@
+.options__final {
+	padding: 20px 25px;
+	font-size: 3rem;
+	background-color: rgba(var(--color-secondary-light-rgb), 0.8);
+	border: var(--color-primary-darker-rgb) solid 4px;
+	border-radius: 15px;
+    box-shadow: 5px 5px 20px rgba(black, 0.3) ;
+	cursor: pointer;
+    transition: 0.2s all;
+	&:hover {
+		filter: brightness(90%);
+        transform: translatey(-1.2rem);
+	}
+	&:active {
+		filter: brightness(80%);
+		transform: scale(0.9) translateY(-0.5rem);
+	}
+}
+

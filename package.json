@@ -1,30 +1,31 @@
 {
-  "name": "pomodoro",
-  "version": "1.0.0",
-  "main": "public/scripts/index.html",
-  "scripts": {
-    "watch:scss": "sass public/scss/main.scss public/css/style.css -w",
-    "compile:scss": "sass public/scss/main.scss public/css/style.comp.css",
-    "concat:css": "concat -o public/css/style.concat.css public/css/**/*.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' public/css/style.concat.css -o public/css/style.prefix.css",
-    "compress:css": "sass public/css/style.prefix.css public/css/style.css --output-style compressed",
-    "build:css": "npm-run-all compile:scss concat:css prefix:css compress:css",
-    "devserver": "live-server public --browser=\"C:/Program Files/Firefox Developer Edition/firefox.exe\"",
-    "start": "npm-run-all --parallel devserver watch:scss",
-    "start parcel": "parcel public/index.htm",
-    "build": "parcel build public/index.htm --dist-dir ./dist"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.13",
-    "concat": "^1.0.3",
-    "npm-run-all": "^4.1.5",
-    "parcel": "^2.8.0",
-    "postcss-cli": "^10.0.0"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "sass": "^1.77.8"
-  }
+	"name": "pomodoro",
+	"version": "1.0.0",
+	"main": "public/scripts/index.html",
+	"scripts": {
+		"watch:scss": "sass public/scss/main.scss public/css/style.css -w",
+		"compile:scss": "sass public/scss/main.scss public/css/style.comp.css",
+		"concat:css": "concat -o public/css/style.concat.css public/css/**/*.css",
+		"prefix:css": "postcss --use autoprefixer -b 'last 10 versions' public/css/style.concat.css -o public/css/style.prefix.css",
+		"compress:css": "sass public/css/style.prefix.css public/css/style.css --output-style compressed",
+		"build:css": "npm-run-all compile:scss concat:css prefix:css compress:css",
+		"devserver": "live-server public --browser=\"C:/Program Files/Firefox Developer Edition/firefox.exe\"",
+		"start": "npm-run-all --parallel devserver watch:scss",
+		"start parcel": "parcel public/index.htm",
+		"build": "parcel build public/index.htm --dist-dir ./dist",
+		"debug": "ndb server.js"
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.4.13",
+		"concat": "^1.0.3",
+		"npm-run-all": "^4.1.5",
+		"parcel": "^2.8.0",
+		"postcss-cli": "^10.0.0"
+	},
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"sass": "^1.77.8"
+	}
 }

@@ -1,0 +1,72 @@
+.settings {
+
+	input {
+		&[type='number'],
+		&[type='text'] {
+			@include option;
+			appearance: textfield;
+		}
+
+		&[type='file'] {
+			display: none;
+		}
+		&[type='range'] {
+			-webkit-appearance: none;
+			appearance: none;
+			width: 100%;
+			background: none;
+
+			&::-webkit-slider-runnable-track {
+				background: linear-gradient(
+					to right,
+					var(--color-primary-dark) var(--value, 50%),
+					white var(--value, 50%)
+				);
+				border-radius: 1rem; /* Smoother track edges */
+				height: 0.5rem; /* Track height */
+			}
+
+			&::-webkit-slider-thumb {
+				-webkit-appearance: none;
+				height: 2rem;
+				width: 2rem;
+				border-radius: 50%;
+				background: var(--color-primary-dark);
+				cursor: pointer;
+				box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Smoother border effect */
+			}
+
+			&::-moz-range-thumb {
+				background: var(--color-primary-dark);
+				height: 2rem;
+				width: 2rem;
+				border-radius: 50%;
+				box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Smoother border effect */
+			}
+
+			&::-moz-range-progress {
+				background: var(--color-primary-dark);
+				height: 0.5rem; /* Match track height */
+			}
+
+			&::-moz-range-track {
+				background: white;
+				height: 0.5rem; /* Match track height */
+				border-radius: 1rem; /* Smoother track edges */
+			}
+		}
+		&[type='radio'] {
+			margin-right: 1rem;
+			width: 2rem;
+			height: 2rem;
+			appearance: none;
+			border: 2px solid var(--color-primary-dark);
+			border-radius: 50%;
+			background-color: rgba(var(--color-primary-rgb), 0.8);
+			cursor: pointer;
+			&:checked {
+				background-color: rgba(var(--color-secondary-rgb), 0.8);
+			}
+		}
+	}
+}

@@ -9,14 +9,8 @@
   --color-primary-darker-rgb: 55, 41, 93;
   --color-primary-light: rgb(144, 122, 199);
   --color-primary-light-rgb: 144, 122, 199;
-  --color-primary-lighter: rgb(185, 163, 208);
-  --color-primary-lighter-rgb: 185, 163, 208;
   --color-secondary: rgb(134, 214, 195);
   --color-secondary-rgb: 134, 214, 195;
-  --color-secondary-dark: rgb(92, 184, 166);
-  --color-secondary-dark-rgb: 92, 184, 166;
-  --color-secondary-darker: rgb(58, 143, 127);
-  --color-secondary-darker-rgb: 58, 143, 127;
   --color-secondary-light: rgb(163, 233, 215);
   --color-secondary-light-rgb: 163, 233, 215;
   --color-secondary-lighter: rgb(196, 244, 233);
@@ -33,130 +27,108 @@
   --color-tertiary-lighter-rgb: 153, 169, 186;
   --color-rest: rgb(183, 228, 199);
   --color-rest-rgb: 183, 228, 199;
-  --color-rest-dark: rgb(143, 198, 168);
-  --color-rest-dark-rgb: 143, 198, 168;
-  --color-rest-darker: rgb(106, 169, 139);
-  --color-rest-darker-rgb: 106, 169, 139;
   --color-rest-light: rgb(209, 241, 217);
   --color-rest-light-rgb: 209, 241, 217;
   --color-rest-lighter: rgb(230, 248, 236);
   --color-rest-lighter-rgb: 230, 248, 236;
   --color-focus: rgb(246, 119, 65);
   --color-focus-rgb: 246, 119, 65;
-  --color-focus-dark: rgb(216, 90, 31);
-  --color-focus-dark-rgb: 216, 90, 31;
-  --color-focus-darker: rgb(182, 61, 0);
-  --color-focus-darker-rgb: 182, 61, 0;
-  --color-focus-light: rgb(249, 160, 109);
-  --color-focus-light-rgb: 249, 160, 109;
-  --color-focus-lighter: rgb(251, 200, 160);
-  --color-focus-lighter-rgb: 251, 200, 160;
-}
-
-.monkai-theme {
-  --color-primary: rgb(169, 132, 103);
-  --color-primary-rgb: 169, 132, 103;
-  --color-primary-dark: rgb(139, 109, 79);
-  --color-primary-dark-rgb: 139, 109, 79;
-  --color-primary-darker: rgb(111, 86, 59);
-  --color-primary-darker-rgb: 111, 86, 59;
-  --color-primary-light: rgb(196, 168, 138);
-  --color-primary-light-rgb: 196, 168, 138;
-  --color-primary-lighter: rgb(215, 192, 164);
-  --color-primary-lighter-rgb: 215, 192, 164;
-  --color-secondary: rgb(107, 142, 35);
-  --color-secondary-rgb: 107, 142, 35;
-  --color-secondary-dark: rgb(79, 107, 26);
-  --color-secondary-dark-rgb: 79, 107, 26;
-  --color-secondary-darker: rgb(58, 79, 19);
-  --color-secondary-darker-rgb: 58, 79, 19;
-  --color-secondary-light: rgb(141, 191, 62);
-  --color-secondary-light-rgb: 141, 191, 62;
-  --color-secondary-lighter: rgb(176, 209, 95);
-  --color-secondary-lighter-rgb: 176, 209, 95;
-  --color-tertiary: rgb(107, 107, 107);
-  --color-tertiary-rgb: 107, 107, 107;
-  --color-tertiary-dark: rgb(79, 79, 79);
-  --color-tertiary-dark-rgb: 79, 79, 79;
-  --color-tertiary-darker: rgb(58, 58, 58);
-  --color-tertiary-darker-rgb: 58, 58, 58;
-  --color-tertiary-light: rgb(141, 141, 141);
-  --color-tertiary-light-rgb: 141, 141, 141;
-  --color-tertiary-lighter: rgb(176, 176, 176);
-  --color-tertiary-lighter-rgb: 176, 176, 176;
-  --color-rest: rgb(183, 183, 183);
-  --color-rest-rgb: 183, 183, 183;
-  --color-rest-dark: rgb(143, 143, 143);
-  --color-rest-dark-rgb: 143, 143, 143;
-  --color-rest-darker: rgb(106, 106, 106);
-  --color-rest-darker-rgb: 106, 106, 106;
-  --color-rest-light: rgb(209, 209, 209);
-  --color-rest-light-rgb: 209, 209, 209;
-  --color-rest-lighter: rgb(230, 230, 230);
-  --color-rest-lighter-rgb: 230, 230, 230;
-  --color-focus: rgb(194, 119, 49);
-  --color-focus-rgb: 194, 119, 49;
-  --color-focus-dark: rgb(168, 90, 31);
-  --color-focus-dark-rgb: 168, 90, 31;
-  --color-focus-darker: rgb(140, 61, 0);
-  --color-focus-darker-rgb: 140, 61, 0;
-  --color-focus-light: rgb(209, 143, 95);
-  --color-focus-light-rgb: 209, 143, 95;
-  --color-focus-lighter: rgb(230, 191, 160);
-  --color-focus-lighter-rgb: 230, 191, 160;
-}
-
-.owl-theme {
-  --color-primary: rgb(255, 214, 10);
-  --color-primary-rgb: 255, 214, 10;
-  --color-primary-dark: rgb(230, 193, 9);
-  --color-primary-dark-rgb: 230, 193, 9;
-  --color-primary-darker: rgb(191, 154, 7);
-  --color-primary-darker-rgb: 191, 154, 7;
-  --color-primary-light: rgb(255, 223, 78);
-  --color-primary-light-rgb: 255, 223, 78;
-  --color-primary-lighter: rgb(255, 229, 122);
-  --color-primary-lighter-rgb: 255, 229, 122;
-  --color-secondary: rgb(0, 53, 102);
-  --color-secondary-rgb: 0, 53, 102;
-  --color-secondary-dark: rgb(0, 43, 92);
-  --color-secondary-dark-rgb: 0, 43, 92;
-  --color-secondary-darker: rgb(0, 33, 74);
-  --color-secondary-darker-rgb: 0, 33, 74;
-  --color-secondary-light: rgb(0, 64, 123);
-  --color-secondary-light-rgb: 0, 64, 123;
-  --color-secondary-lighter: rgb(0, 80, 162);
-  --color-secondary-lighter-rgb: 0, 80, 162;
-  --color-tertiary: rgb(0, 8, 20);
-  --color-tertiary-rgb: 0, 8, 20;
-  --color-tertiary-dark: rgb(0, 6, 18);
-  --color-tertiary-dark-rgb: 0, 6, 18;
-  --color-tertiary-darker: rgb(0, 4, 15);
-  --color-tertiary-darker-rgb: 0, 4, 15;
-  --color-tertiary-light: rgb(0, 10, 23);
-  --color-tertiary-light-rgb: 0, 10, 23;
-  --color-tertiary-lighter: rgb(0, 13, 29);
-  --color-tertiary-lighter-rgb: 0, 13, 29;
-  --color-rest: rgb(114, 9, 183);
-  --color-rest-rgb: 114, 9, 183;
-  --color-rest-dark: rgb(95, 8, 160);
-  --color-rest-dark-rgb: 95, 8, 160;
-  --color-rest-darker: rgb(75, 6, 128);
-  --color-rest-darker-rgb: 75, 6, 128;
-  --color-rest-light: rgb(140, 45, 183);
-  --color-rest-light-rgb: 140, 45, 183;
-  --color-rest-lighter: rgb(164, 79, 199);
-  --color-rest-lighter-rgb: 164, 79, 199;
-  --color-focus: rgb(255, 121, 46);
-  --color-focus-rgb: 255, 121, 46;
-  --color-focus-dark: rgb(230, 95, 31);
-  --color-focus-dark-rgb: 230, 95, 31;
-  --color-focus-darker: rgb(191, 68, 0);
-  --color-focus-darker-rgb: 191, 68, 0;
-  --color-focus-light: rgb(255, 158, 95);
-  --color-focus-light-rgb: 255, 158, 95;
-  --color-focus-lighter: rgb(255, 184, 143);
-  --color-focus-lighter-rgb: 255, 184, 143;
+  --Lagoon-color-primary: rgb(106, 89, 149);
+  --Lagoon-color-primary-rgb: 106, 89, 149;
+  --Lagoon-color-primary-dark: rgb(78, 61, 123);
+  --Lagoon-color-primary-dark-rgb: 78, 61, 123;
+  --Lagoon-color-primary-darker: rgb(55, 41, 93);
+  --Lagoon-color-primary-darker-rgb: 55, 41, 93;
+  --Lagoon-color-primary-light: rgb(144, 122, 199);
+  --Lagoon-color-primary-light-rgb: 144, 122, 199;
+  --Lagoon-color-secondary: rgb(134, 214, 195);
+  --Lagoon-color-secondary-rgb: 134, 214, 195;
+  --Lagoon-color-secondary-light: rgb(163, 233, 215);
+  --Lagoon-color-secondary-light-rgb: 163, 233, 215;
+  --Lagoon-color-secondary-lighter: rgb(196, 244, 233);
+  --Lagoon-color-secondary-lighter-rgb: 196, 244, 233;
+  --Lagoon-color-tertiary: rgb(101, 119, 142);
+  --Lagoon-color-tertiary-rgb: 101, 119, 142;
+  --Lagoon-color-tertiary-dark: rgb(74, 90, 110);
+  --Lagoon-color-tertiary-dark-rgb: 74, 90, 110;
+  --Lagoon-color-tertiary-darker: rgb(47, 58, 74);
+  --Lagoon-color-tertiary-darker-rgb: 47, 58, 74;
+  --Lagoon-color-tertiary-light: rgb(128, 146, 165);
+  --Lagoon-color-tertiary-light-rgb: 128, 146, 165;
+  --Lagoon-color-tertiary-lighter: rgb(153, 169, 186);
+  --Lagoon-color-tertiary-lighter-rgb: 153, 169, 186;
+  --Lagoon-color-rest: rgb(183, 228, 199);
+  --Lagoon-color-rest-rgb: 183, 228, 199;
+  --Lagoon-color-rest-light: rgb(209, 241, 217);
+  --Lagoon-color-rest-light-rgb: 209, 241, 217;
+  --Lagoon-color-rest-lighter: rgb(230, 248, 236);
+  --Lagoon-color-rest-lighter-rgb: 230, 248, 236;
+  --Lagoon-color-focus: rgb(246, 119, 65);
+  --Lagoon-color-focus-rgb: 246, 119, 65;
+  --Monkai-color-primary: rgb(169, 132, 103);
+  --Monkai-color-primary-rgb: 169, 132, 103;
+  --Monkai-color-primary-dark: rgb(139, 109, 79);
+  --Monkai-color-primary-dark-rgb: 139, 109, 79;
+  --Monkai-color-primary-darker: rgb(111, 86, 59);
+  --Monkai-color-primary-darker-rgb: 111, 86, 59;
+  --Monkai-color-primary-light: rgb(196, 168, 138);
+  --Monkai-color-primary-light-rgb: 196, 168, 138;
+  --Monkai-color-secondary: rgb(107, 142, 35);
+  --Monkai-color-secondary-rgb: 107, 142, 35;
+  --Monkai-color-secondary-light: rgb(141, 191, 62);
+  --Monkai-color-secondary-light-rgb: 141, 191, 62;
+  --Monkai-color-secondary-lighter: rgb(176, 209, 95);
+  --Monkai-color-secondary-lighter-rgb: 176, 209, 95;
+  --Monkai-color-tertiary: rgb(107, 107, 107);
+  --Monkai-color-tertiary-rgb: 107, 107, 107;
+  --Monkai-color-tertiary-dark: rgb(79, 79, 79);
+  --Monkai-color-tertiary-dark-rgb: 79, 79, 79;
+  --Monkai-color-tertiary-darker: rgb(58, 58, 58);
+  --Monkai-color-tertiary-darker-rgb: 58, 58, 58;
+  --Monkai-color-tertiary-light: rgb(141, 141, 141);
+  --Monkai-color-tertiary-light-rgb: 141, 141, 141;
+  --Monkai-color-tertiary-lighter: rgb(176, 176, 176);
+  --Monkai-color-tertiary-lighter-rgb: 176, 176, 176;
+  --Monkai-color-rest: rgb(183, 183, 183);
+  --Monkai-color-rest-rgb: 183, 183, 183;
+  --Monkai-color-rest-light: rgb(209, 209, 209);
+  --Monkai-color-rest-light-rgb: 209, 209, 209;
+  --Monkai-color-rest-lighter: rgb(230, 230, 230);
+  --Monkai-color-rest-lighter-rgb: 230, 230, 230;
+  --Monkai-color-focus: rgb(194, 119, 49);
+  --Monkai-color-focus-rgb: 194, 119, 49;
+  --Owl-color-primary: rgb(255, 214, 10);
+  --Owl-color-primary-rgb: 255, 214, 10;
+  --Owl-color-primary-dark: rgb(203, 171, 12);
+  --Owl-color-primary-dark-rgb: 230, 193, 9;
+  --Owl-color-primary-darker: rgb(133, 107, 6);
+  --Owl-color-primary-darker-rgb: 191, 154, 7;
+  --Owl-color-primary-light: rgb(255, 223, 78);
+  --Owl-color-primary-light-rgb: 255, 223, 78;
+  --Owl-color-secondary: rgb(25, 13, 62);
+  --Owl-color-secondary-rgb: 25, 13, 62;
+  --Owl-color-secondary-light: rgb(0, 64, 123);
+  --Owl-color-secondary-light-rgb: 0, 64, 123;
+  --Owl-color-secondary-lighter: rgb(0, 80, 162);
+  --Owl-color-secondary-lighter-rgb: 0, 80, 162;
+  --Owl-color-tertiary: rgb(0, 8, 20);
+  --Owl-color-tertiary-rgb: 0, 8, 20;
+  --Owl-color-tertiary-dark: rgb(0, 6, 18);
+  --Owl-color-tertiary-dark-rgb: 0, 6, 18;
+  --Owl-color-tertiary-darker: rgb(0, 4, 15);
+  --Owl-color-tertiary-darker-rgb: 0, 4, 15;
+  --Owl-color-tertiary-light: rgb(0, 10, 23);
+  --Owl-color-tertiary-light-rgb: 0, 10, 23;
+  --Owl-color-tertiary-lighter: rgb(56, 36, 83);
+  --Owl-color-tertiary-lighter-rgb: 0, 13, 29;
+  --Owl-color-rest: rgb(245, 66, 96);
+  --Owl-color-rest-rgb: 114, 9, 183;
+  --Owl-color-rest-light: rgb(224, 170, 250);
+  --Owl-color-rest-light-rgb: 140, 45, 183;
+  --Owl-color-rest-lighter: rgb(232, 179, 253);
+  --Owl-color-rest-lighter-rgb: 164, 79, 199;
+  --Owl-color-focus: rgb(245, 245, 245);
+  --Owl-color-focus-rgb: 255, 121, 46;
 }
 
 /*
@@ -218,6 +190,86 @@ body {
   font-weight: 300;
 }
 
+.options__final {
+  padding: 20px 25px;
+  font-size: 3rem;
+  background-color: rgba(var(--color-secondary-light-rgb), 0.8);
+  border: var(--color-primary-darker-rgb) solid 4px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: 0.2s all;
+}
+.options__final:hover {
+  filter: brightness(90%);
+  transform: translatey(-1.2rem);
+}
+.options__final:active {
+  filter: brightness(80%);
+  transform: scale(0.9) translateY(-0.5rem);
+}
+
+.settings input[type=number], .settings input[type=text] {
+  padding: 3rem;
+  border-radius: 5rem;
+  background-color: rgba(var(--color-primary-rgb), 0.8);
+  border: black solid 2px;
+  font-size: 3rem;
+  appearance: textfield;
+}
+.settings input[type=file] {
+  display: none;
+}
+.settings input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background: none;
+}
+.settings input[type=range]::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, var(--color-primary-dark) var(--value, 50%), white var(--value, 50%));
+  border-radius: 1rem; /* Smoother track edges */
+  height: 0.5rem; /* Track height */
+}
+.settings input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background: var(--color-primary-dark);
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Smoother border effect */
+}
+.settings input[type=range]::-moz-range-thumb {
+  background: var(--color-primary-dark);
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Smoother border effect */
+}
+.settings input[type=range]::-moz-range-progress {
+  background: var(--color-primary-dark);
+  height: 0.5rem; /* Match track height */
+}
+.settings input[type=range]::-moz-range-track {
+  background: white;
+  height: 0.5rem; /* Match track height */
+  border-radius: 1rem; /* Smoother track edges */
+}
+.settings input[type=radio] {
+  margin-right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  appearance: none;
+  border: 2px solid var(--color-primary-dark);
+  border-radius: 50%;
+  background-color: rgba(var(--color-primary-rgb), 0.8);
+  cursor: pointer;
+}
+.settings input[type=radio]:checked {
+  background-color: rgba(var(--color-secondary-rgb), 0.8);
+}
+
 nav .home {
   position: absolute;
   fill: rgba(var(--color-primary-rgb), 0.8);
@@ -231,7 +283,7 @@ nav .home:hover {
   cursor: pointer;
 }
 nav .home:active {
-  transform: scale(1.1) translateY(-0.2rem);
+  transform: scale(0.9) translateY(-0.2rem);
 }
 
 .main {
@@ -290,13 +342,14 @@ nav .home:active {
   fill: var(--color-primary-darker);
   height: 7rem;
   width: 7rem;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.6));
 }
 .main__container__controls > *:hover {
   fill: var(--color-tertiary-lighter);
   cursor: pointer;
 }
 .main__container__controls > *:active {
-  transform: scale(1.1) translateY(-5px);
+  transform: scale(0.9) translateY(-5px);
 }
 .main__container__controls--play {
   height: 10rem;
@@ -308,7 +361,7 @@ nav .home:active {
   fill: var(--color-secondary) !important;
 }
 .main__container__controls--play:active {
-  transform: scale(1.1) translateY(-5px);
+  transform: scale(0.9) translateY(-5px);
 }
 .main__container--round {
   color: var(--color-tertiary-lighter);
@@ -324,6 +377,12 @@ nav .home:active {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+.settings #error-message {
+  color: red;
+  font-size: 5rem;
+  display: none;
 }
 .settings .options {
   background-color: rgba(var(--color-primary-light-rgb), 0.8);
@@ -353,66 +412,6 @@ nav .home:active {
 }
 .settings .options__theme {
   align-self: center;
-}
-.settings .options input[type=number] {
-  padding: 3rem;
-  border-radius: 5rem;
-  background-color: rgba(var(--color-primary-rgb), 0.8);
-  border: black solid 2px;
-  font-size: 3rem;
-  appearance: textfield;
-}
-.settings .options input[type=file] {
-  display: none;
-}
-.settings .options input[type=range] {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 100%;
-  background: none;
-}
-.settings .options input[type=range]::-webkit-slider-runnable-track {
-  background: linear-gradient(to right, var(--color-primary-dark) var(--value, 50%), white var(--value, 50%));
-  border-radius: 1rem; /* Smoother track edges */
-  height: 0.5rem; /* Track height */
-}
-.settings .options input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 50%;
-  background: var(--color-primary-dark);
-  cursor: pointer;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Smoother border effect */
-}
-.settings .options input[type=range]::-moz-range-thumb {
-  background: var(--color-primary-dark);
-  height: 2rem;
-  width: 2rem;
-  border-radius: 50%;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Smoother border effect */
-}
-.settings .options input[type=range]::-moz-range-progress {
-  background: var(--color-primary-dark);
-  height: 0.5rem; /* Match track height */
-}
-.settings .options input[type=range]::-moz-range-track {
-  background: white;
-  height: 0.5rem; /* Match track height */
-  border-radius: 1rem; /* Smoother track edges */
-}
-.settings .options input[type=radio] {
-  margin-right: 1rem;
-  width: 2rem;
-  height: 2rem;
-  appearance: none;
-  border: 2px solid var(--color-primary);
-  border-radius: 50%;
-  background-color: rgba(var(--color-primary-rgb), 0.8);
-  cursor: pointer;
-}
-.settings .options input[type=radio]:checked {
-  background-color: rgba(var(--color-secondary-rgb), 0.8);
 }
 
 /*# sourceMappingURL=style.css.map */

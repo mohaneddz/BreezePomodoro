@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/img/favicon.png" type="image/x-icon" />
     <title>Website Template</title>
+    <style>
+      .no-fouc { visibility: hidden; }
+    </style>
   </head>
   <body class="settings">
     <!-- Menu -->
@@ -17,40 +20,44 @@
         </svg>
       </a>
     </nav>
-
+    
+    <span id="error-message">Invalid time format</span>
     <!--  Options -->
-    <div class="options">
-      <label for="intervals">Number Of Intervals : </label>
-      <input type="number" name="intervals" id="intervals" />
-
-      <label for="focus">Focus duration : </label>
-      <input type="number" name="focus" id="focus_duration" />
-
-      <label for="rest">Rest duration : </label>
-      <input type="number" name="rest" id="rest_duration" />
-
-      <label for="background">Set Background :</label>
-      <label class="options__background" for="background">Upload File</label>
-      <input id="background" type="file" name="background" accept="image/*" />
-
-      <label for="blur">Blur Amount : </label>
-      <input type="range" name="blur" id="blur" />
-
-      <label for="options__theme"> Theme : </label>
-      <div class="options__theme">
-        <label>
-          <input type="radio" name="theme" value="light" class="theme" />
-          Lagoon
-        </label>
-        <label>
-          <input type="radio" name="theme" value="dark" class="theme" />
-          Owl
-        </label>
-        <label>
-          <input type="radio" name="theme" value="dark" class="theme" />
-          Monkai
-        </label>
-      </div>
-    </div>
-  </body>
-</html>
+    <form action="#" class="options" >
+        <label for="intervals" method= >Number Of Intervals : </label>
+        <input placeholder="ex. 4" type="number" name="intervals" id="intervals" required />
+    
+        <label for="focus">Focus duration : </label>
+        <input placeholder="ex. HH:MM:SS" type="text" name="focus" id="focus" required />
+    
+        <label for="rest">Rest duration : </label>
+        <input placeholder="ex. HH:MM:SS" type="text" name="rest" id="rest" required />
+    
+        <label for="background">Set Background :</label>
+        <label class="options__background" for="background">Upload File</label>
+        <input id="background" type="file" name="background" accept="image/*" />
+    
+        <label for="blur">Blur Amount : </label>
+        <input type="range" name="blur" id="blur" />
+    
+        <label for="options__theme"> Theme : </label>
+        <div class="options__theme">
+          <label>
+            <input type="radio" name="theme" value="Lagoon" class="theme" />
+            Lagoon
+          </label>
+          <label>
+            <input type="radio" name="theme" value="Owl" class="theme" />
+            Owl
+          </label>
+          <label>
+            <input type="radio" name="theme" value="Monkai" class="theme" />
+            Monkai
+          </label>
+        </div>
+        <button type="reset" class="options__final reset" id="reset">Reset</button>
+        <button type="submit" class="options__final apply" id="apply">Apply</button>
+      </form>
+    </body>
+    </html>
+    

@@ -1,116 +1,55 @@
 .settings {
-  // Background
-  background-image: linear-gradient(
-      to top,
-      rgba(var(--color-primary-rgb), 0.8),
-      rgba(var(--color-secondary-rgb), 0.8)
-    ),
-    url('../../img/Default.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+	// Background
+	background-image: linear-gradient(
+			to top,
+			rgba(var(--color-primary-rgb), 0.8),
+			rgba(var(--color-secondary-rgb), 0.8)
+		),
+		url('../../img/Default.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 
-  .options {
-    // Style
-    background-color: rgba(var(--color-primary-light-rgb), 0.8);
-    border: var(--color-primary-darker-rgb) solid 4px;
-    padding: 5rem;
-    box-shadow: 0 0 10rem rgba(var(--color-primary-darker-rgb), 0.5);
-    border-radius: 15px;
+	#error-message{
+		color: red;
+		font-size: 5rem;
+		display: none;
+	}
 
-    // Grid Settings
-    display: grid;
-    grid-template-columns: max-content 3fr;
-    grid-template-rows: repeat(6, 1fr);
-    gap: 5rem;
+	.options {
+		// Style
+		background-color: rgba(var(--color-primary-light-rgb), 0.8);
+		border: var(--color-primary-darker-rgb) solid 4px;
+		padding: 5rem;
+		box-shadow: 0 0 10rem rgba(var(--color-primary-darker-rgb), 0.5);
+		border-radius: 15px;
 
-    &__background {
-      @include option;
-      text-align: center;
-      cursor: pointer;
-      &:hover {
-        filter: brightness(90%);
-      }
-      &:active {
-        filter: brightness(70%);
-      }
-    }
-    &__theme {
-      align-self: center;
-    }
+		// Grid Settings
+		display: grid;
+		grid-template-columns: max-content 3fr;
+		grid-template-rows: repeat(6, 1fr);
+		gap: 5rem;
 
-    // TODO Add Custom Buttons to increase / Decrease using JS https://www.youtube.com/watch?v=zCT7vRaXovk
-    input {
-      &[type='number'] {
-        @include option;
-        appearance: textfield;
-      }
+		&__background {
+			@include option;
+			text-align: center;
+			cursor: pointer;
+			&:hover {
+				filter: brightness(90%);
+			}
+			&:active {
+				filter: brightness(70%);
+			}
+		}
+		&__theme {
+			align-self: center;
+		}
 
-      &[type='file'] {
-        display: none;
-      }
-      &[type='range'] {
-        -webkit-appearance: none;
-        appearance: none;
-        width: 100%;
-        background: none;
-
-        &::-webkit-slider-runnable-track {
-          background: linear-gradient(
-            to right,
-            var(--color-primary-dark) var(--value, 50%),
-            white var(--value, 50%)
-          );
-          border-radius: 1rem; /* Smoother track edges */
-          height: 0.5rem; /* Track height */
-        }
-
-        &::-webkit-slider-thumb {
-          -webkit-appearance: none;
-          height: 2rem;
-          width: 2rem;
-          border-radius: 50%;
-          background: var(--color-primary-dark);
-          cursor: pointer;
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Smoother border effect */
-        }
-
-        &::-moz-range-thumb {
-          background: var(--color-primary-dark);
-          height: 2rem;
-          width: 2rem;
-          border-radius: 50%;
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Smoother border effect */
-        }
-
-        &::-moz-range-progress {
-          background: var(--color-primary-dark);
-          height: 0.5rem; /* Match track height */
-        }
-
-        &::-moz-range-track {
-          background: white;
-          height: 0.5rem; /* Match track height */
-          border-radius: 1rem; /* Smoother track edges */
-        }
-      }
-      &[type='radio'] {
-        margin-right: 1rem;
-        width: 2rem;
-        height: 2rem;
-        appearance: none;
-        border: 2px solid var(--color-primary);
-        border-radius: 50%;
-        background-color: rgba(var(--color-primary-rgb), 0.8);
-        cursor: pointer;
-        &:checked {
-          background-color: rgba(var(--color-secondary-rgb), 0.8);
-        }
-      }
-    }
-  }
+		// TODO Add Custom Buttons to increase / Decrease using JS https://www.youtube.com/watch?v=zCT7vRaXovk
+	}
 }
