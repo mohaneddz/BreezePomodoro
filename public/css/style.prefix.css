@@ -1,0 +1,457 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+:root {
+  /* Default Theme: LAGOON */
+  --color-primary: rgb(106, 89, 149);
+  --color-primary-rgb: 106, 89, 149;
+  --color-primary-dark: rgb(78, 61, 123);
+  --color-primary-dark-rgb: 78, 61, 123;
+  --color-primary-darker: rgb(55, 41, 93);
+  --color-primary-darker-rgb: 55, 41, 93;
+  --color-primary-light: rgb(144, 122, 199);
+  --color-primary-light-rgb: 144, 122, 199;
+  --color-secondary: rgb(134, 214, 195);
+  --color-secondary-rgb: 134, 214, 195;
+  --color-secondary-light: rgb(163, 233, 215);
+  --color-secondary-light-rgb: 163, 233, 215;
+  --color-secondary-lighter: rgb(196, 244, 233);
+  --color-secondary-lighter-rgb: 196, 244, 233;
+  --color-tertiary: rgb(101, 119, 142);
+  --color-tertiary-rgb: 101, 119, 142;
+  --color-tertiary-dark: rgb(74, 90, 110);
+  --color-tertiary-dark-rgb: 74, 90, 110;
+  --color-tertiary-darker: rgb(47, 58, 74);
+  --color-tertiary-darker-rgb: 47, 58, 74;
+  --color-tertiary-light: rgb(128, 146, 165);
+  --color-tertiary-light-rgb: 128, 146, 165;
+  --color-tertiary-lighter: rgb(153, 169, 186);
+  --color-tertiary-lighter-rgb: 153, 169, 186;
+  --color-rest: rgb(183, 228, 199);
+  --color-rest-rgb: 183, 228, 199;
+  --color-rest-light: rgb(209, 241, 217);
+  --color-rest-light-rgb: 209, 241, 217;
+  --color-rest-lighter: rgb(230, 248, 236);
+  --color-rest-lighter-rgb: 230, 248, 236;
+  --color-focus: rgb(246, 119, 65);
+  --color-focus-rgb: 246, 119, 65;
+  --Lagoon-color-primary: rgb(106, 89, 149);
+  --Lagoon-color-primary-rgb: 106, 89, 149;
+  --Lagoon-color-primary-dark: rgb(78, 61, 123);
+  --Lagoon-color-primary-dark-rgb: 78, 61, 123;
+  --Lagoon-color-primary-darker: rgb(55, 41, 93);
+  --Lagoon-color-primary-darker-rgb: 55, 41, 93;
+  --Lagoon-color-primary-light: rgb(144, 122, 199);
+  --Lagoon-color-primary-light-rgb: 144, 122, 199;
+  --Lagoon-color-secondary: rgb(134, 214, 195);
+  --Lagoon-color-secondary-rgb: 134, 214, 195;
+  --Lagoon-color-secondary-light: rgb(163, 233, 215);
+  --Lagoon-color-secondary-light-rgb: 163, 233, 215;
+  --Lagoon-color-secondary-lighter: rgb(196, 244, 233);
+  --Lagoon-color-secondary-lighter-rgb: 196, 244, 233;
+  --Lagoon-color-tertiary: rgb(101, 119, 142);
+  --Lagoon-color-tertiary-rgb: 101, 119, 142;
+  --Lagoon-color-tertiary-dark: rgb(74, 90, 110);
+  --Lagoon-color-tertiary-dark-rgb: 74, 90, 110;
+  --Lagoon-color-tertiary-darker: rgb(47, 58, 74);
+  --Lagoon-color-tertiary-darker-rgb: 47, 58, 74;
+  --Lagoon-color-tertiary-light: rgb(128, 146, 165);
+  --Lagoon-color-tertiary-light-rgb: 128, 146, 165;
+  --Lagoon-color-tertiary-lighter: rgb(153, 169, 186);
+  --Lagoon-color-tertiary-lighter-rgb: 153, 169, 186;
+  --Lagoon-color-rest: rgb(183, 228, 199);
+  --Lagoon-color-rest-rgb: 183, 228, 199;
+  --Lagoon-color-rest-light: rgb(209, 241, 217);
+  --Lagoon-color-rest-light-rgb: 209, 241, 217;
+  --Lagoon-color-rest-lighter: rgb(230, 248, 236);
+  --Lagoon-color-rest-lighter-rgb: 230, 248, 236;
+  --Lagoon-color-focus: rgb(246, 119, 65);
+  --Lagoon-color-focus-rgb: 246, 119, 65;
+  --Monkai-color-primary: rgb(169, 132, 103);
+  --Monkai-color-primary-rgb: 169, 132, 103;
+  --Monkai-color-primary-dark: rgb(139, 109, 79);
+  --Monkai-color-primary-dark-rgb: 139, 109, 79;
+  --Monkai-color-primary-darker: rgb(111, 86, 59);
+  --Monkai-color-primary-darker-rgb: 111, 86, 59;
+  --Monkai-color-primary-light: rgb(196, 168, 138);
+  --Monkai-color-primary-light-rgb: 196, 168, 138;
+  --Monkai-color-secondary: rgb(41, 189, 195);
+  --Monkai-color-secondary-rgb: 41, 189, 195;
+  --Monkai-color-secondary-light: rgb(55, 213, 218);
+  --Monkai-color-secondary-light-rgb: 55, 213, 218;
+  --Monkai-color-secondary-lighter: rgb(93, 246, 252);
+  --Monkai-color-secondary-lighter-rgb: 93, 246, 252;
+  --Monkai-color-tertiary: rgb(107, 107, 107);
+  --Monkai-color-tertiary-rgb: 107, 107, 107;
+  --Monkai-color-tertiary-dark: rgb(79, 79, 79);
+  --Monkai-color-tertiary-dark-rgb: 79, 79, 79;
+  --Monkai-color-tertiary-darker: rgb(58, 58, 58);
+  --Monkai-color-tertiary-darker-rgb: 58, 58, 58;
+  --Monkai-color-tertiary-light: rgb(141, 141, 141);
+  --Monkai-color-tertiary-light-rgb: 141, 141, 141;
+  --Monkai-color-tertiary-lighter: rgb(176, 176, 176);
+  --Monkai-color-tertiary-lighter-rgb: 176, 176, 176;
+  --Monkai-color-rest: rgb(183, 183, 183);
+  --Monkai-color-rest-rgb: 183, 183, 183;
+  --Monkai-color-rest-light: rgb(209, 209, 209);
+  --Monkai-color-rest-light-rgb: 209, 209, 209;
+  --Monkai-color-rest-lighter: rgb(230, 230, 230);
+  --Monkai-color-rest-lighter-rgb: 230, 230, 230;
+  --Monkai-color-focus: rgb(194, 119, 49);
+  --Monkai-color-focus-rgb: 194, 119, 49;
+  --Owl-color-primary: rgb(255, 214, 10);
+  --Owl-color-primary-rgb: 255, 214, 10;
+  --Owl-color-primary-dark: rgb(203, 171, 12);
+  --Owl-color-primary-dark-rgb: 230, 193, 9;
+  --Owl-color-primary-darker: rgb(133, 107, 6);
+  --Owl-color-primary-darker-rgb: 191, 154, 7;
+  --Owl-color-primary-light: rgb(255, 223, 78);
+  --Owl-color-primary-light-rgb: 255, 223, 78;
+  --Owl-color-secondary: rgb(25, 13, 62);
+  --Owl-color-secondary-rgb: 25, 13, 62;
+  --Owl-color-secondary-light: rgb(0, 64, 123);
+  --Owl-color-secondary-light-rgb: 0, 64, 123;
+  --Owl-color-secondary-lighter: rgb(0, 80, 162);
+  --Owl-color-secondary-lighter-rgb: 0, 80, 162;
+  --Owl-color-tertiary: rgb(0, 8, 20);
+  --Owl-color-tertiary-rgb: 0, 8, 20;
+  --Owl-color-tertiary-dark: rgb(0, 6, 18);
+  --Owl-color-tertiary-dark-rgb: 0, 6, 18;
+  --Owl-color-tertiary-darker: rgb(0, 4, 15);
+  --Owl-color-tertiary-darker-rgb: 0, 4, 15;
+  --Owl-color-tertiary-light: rgb(0, 10, 23);
+  --Owl-color-tertiary-light-rgb: 0, 10, 23;
+  --Owl-color-tertiary-lighter: rgb(56, 36, 83);
+  --Owl-color-tertiary-lighter-rgb: 0, 13, 29;
+  --Owl-color-rest: rgb(245, 66, 96);
+  --Owl-color-rest-rgb: 114, 9, 183;
+  --Owl-color-rest-light: rgb(224, 170, 250);
+  --Owl-color-rest-light-rgb: 140, 45, 183;
+  --Owl-color-rest-lighter: rgb(232, 179, 253);
+  --Owl-color-rest-lighter-rgb: 164, 79, 199;
+  --Owl-color-focus: rgb(245, 245, 245);
+  --Owl-color-focus-rgb: 255, 121, 46;
+}
+
+/*
+// 0 - 600px:      Phone
+// 600 - 900px:    Tablet portrait
+// 900 - 1200px:   Tablet landscape
+// [1200 - 1800] is where our normal styles apply
+// 1800px + :      Big desktop
+
+// $breakpoint argument choices:
+// - phone
+// - tab-port
+// - tab-land
+// - big-desktop
+
+// ORDER: Base + typography > general layout + grid > page layout > components
+
+// 1em = 16px
+// */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 50%;
+}
+@media (max-width: 1200px) {
+  html {
+    font-size: 45%;
+  }
+}
+@media (max-width: 992px) {
+  html {
+    font-size: 40%;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 35%;
+  }
+}
+@media (max-width: 576px) {
+  html {
+    font-size: 25%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  padding: 3rem;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative; /* Ensure positioning context for pseudo-element */
+  z-index: 1; /* Ensure the content is above the pseudo-element */
+  margin: 0; /* Remove default margin */
+}
+
+::-moz-selection {
+  background-color: var(--color-secondary);
+}
+
+::selection {
+  background-color: var(--color-secondary);
+}
+
+body {
+  font-family: "Ubuntu Mono", monospace;
+}
+
+.settings label {
+  font-size: 3rem;
+  color: var(--color-primary-darker);
+  font-weight: 700;
+  align-self: center;
+}
+.settings .options__background {
+  font-size: 3rem;
+  color: var(--color-primary-darker);
+  font-weight: 300;
+}
+
+.options__final {
+  padding: 20px 25px;
+  font-size: 3rem;
+  background-color: rgba(var(--color-secondary-light-rgb), 0.8);
+  border: var(--color-primary-darker-rgb) solid 4px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: 0.2s all;
+}
+.options__final:hover {
+  filter: brightness(90%);
+  transform: translatey(-1.2rem);
+}
+.options__final:active {
+  filter: brightness(80%);
+  transform: scale(0.9) translateY(-0.5rem);
+}
+
+.settings input[type=number], .settings input[type=text] {
+  padding: 3rem;
+  border-radius: 5rem;
+  background-color: rgba(var(--color-primary-rgb), 0.8);
+  border: black solid 2px;
+  font-size: 3rem;
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+.settings input[type=file] {
+  display: none;
+}
+.settings input[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 100%;
+  background: none;
+}
+.settings input[type=range]::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, var(--color-primary-dark) var(--value, 50%), white var(--value, 50%));
+  border-radius: 1rem;
+  height: 0.5rem;
+}
+.settings input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background: var(--color-primary-dark);
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.settings input[type=range]::-moz-range-thumb {
+  background: var(--color-primary-dark);
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.settings input[type=range]::-moz-range-progress {
+  background: var(--color-primary-dark);
+  height: 0.5rem;
+}
+.settings input[type=range]::-moz-range-track {
+  background: white;
+  height: 0.5rem;
+  border-radius: 1rem;
+}
+.settings input[type=radio] {
+  margin-right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 2px solid var(--color-primary-dark);
+  border-radius: 50%;
+  background-color: rgba(var(--color-primary-rgb), 0.8);
+  cursor: pointer;
+}
+.settings input[type=radio]:checked {
+  background-color: rgba(var(--color-secondary-rgb), 0.8);
+}
+
+nav .home {
+  position: absolute;
+  fill: rgba(var(--color-primary-rgb), 0.8);
+  top: 1%;
+  left: 1%;
+  width: 5rem;
+  height: 5rem;
+}
+nav .home:hover {
+  fill: var(--color-primary-darker);
+  cursor: pointer;
+}
+nav .home:active {
+  transform: scale(0.9) translateY(-0.2rem);
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main__title {
+  font-size: 15rem;
+  font-weight: 900;
+  color: var(--color-focus);
+  text-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.4);
+  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.3);
+  margin-bottom: 2rem;
+  -webkit-text-decoration: underline overline 5px var(--color-focus);
+          text-decoration: underline overline 5px var(--color-focus);
+  margin-top: -2rem;
+}
+.main__container {
+  background-color: var(--color-primary);
+  width: 60rem;
+  height: 60rem;
+  border-radius: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.4);
+}
+.main__container--timer {
+  color: var(--color-tertiary-lighter);
+  font-size: 12rem;
+  margin-bottom: 2rem;
+  text-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.4);
+  background-color: var(--color-primary-dark);
+  padding: 2rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.main__container--timer:hover {
+  filter: brightness(90%);
+  transform: scale(1.05);
+}
+.main__container--timer:active {
+  filter: brightness(90%);
+  transform: scale(0.9);
+}
+.main__container__controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.main__container__controls > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--color-primary-darker);
+  height: 7rem;
+  width: 7rem;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.6));
+}
+.main__container__controls > *:hover {
+  fill: var(--color-tertiary-lighter);
+  cursor: pointer;
+}
+.main__container__controls > *:active {
+  transform: scale(0.9) translateY(-5px);
+}
+.main__container__controls--play {
+  height: 10rem;
+  width: 10rem;
+  width: 100%;
+  fill: var(--color-primary-darker);
+}
+.main__container__controls--play:hover {
+  fill: var(--color-secondary) !important;
+}
+.main__container__controls--play:active {
+  transform: scale(0.9) translateY(-5px);
+}
+.main__container--round {
+  color: var(--color-tertiary-lighter);
+  margin-top: 3rem;
+  font-size: 3rem;
+}
+
+.settings {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.settings #error-message {
+  color: red;
+  font-size: 5rem;
+  display: none;
+}
+.settings .options {
+  background-color: rgba(var(--color-primary-light-rgb), 0.8);
+  border: var(--color-primary-darker-rgb) solid 4px;
+  padding: 5rem;
+  box-shadow: 0 0 10rem rgba(var(--color-primary-darker-rgb), 0.5);
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: max-content 3fr;
+  grid-template-rows: repeat(6, 1fr);
+  gap: 5rem;
+}
+.settings .options__background {
+  padding: 3rem;
+  border-radius: 5rem;
+  background-color: rgba(var(--color-primary-rgb), 0.8);
+  border: black solid 2px;
+  font-size: 3rem;
+  text-align: center;
+  cursor: pointer;
+}
+.settings .options__background:hover {
+  filter: brightness(90%);
+}
+.settings .options__background:active {
+  filter: brightness(70%);
+}
+.settings .options__theme {
+  align-self: center;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Njc3MvYmFzZS9fdHlwb2dyYXBoeS5zY3NzIiwiLi4vc2Nzcy9jb3JlL192YXJpYWJsZXMuc2NzcyIsInN0eWxlLmNvbmNhdC5jc3MiLCIuLi9zY3NzL2NvcmUvX21peGlucy5zY3NzIiwiLi4vc2Nzcy9iYXNlL19iYXNlLnNjc3MiLCIuLi9zY3NzL2NvbXBvbmVudHMvX2J1dHRvbi5zY3NzIiwiLi4vc2Nzcy9jb21wb25lbnRzL19mb3JtLnNjc3MiLCIuLi9zY3NzL2xheW91dC9fbmF2aWdhdGlvbi5zY3NzIiwiLi4vc2Nzcy9wYWdlcy9ob21lLnNjc3MiLCIuLi9zY3NzL3BhZ2VzL3NldHRpbmdzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQVEsa0hBQUE7QUNBUjtFQUNDLDBCQUFBO0VBQ0Esa0NBQUE7RUFDQSxpQ0FBQTtFQUNBLHNDQUFBO0VBQ0EscUNBQUE7RUFDQSx1Q0FBQTtFQUNBLHNDQUFBO0VBQ0EseUNBQUE7RUFDQSx3Q0FBQTtFQUVBLHFDQUFBO0VBQ0Esb0NBQUE7RUFDQSwyQ0FBQTtFQUNBLDBDQUFBO0VBQ0EsNkNBQUE7RUFDQSw0Q0FBQTtFQUVBLG9DQUFBO0VBQ0EsbUNBQUE7RUFDQSx1Q0FBQTtFQUNBLHNDQUFBO0VBQ0Esd0NBQUE7RUFDQSx1Q0FBQTtFQUNBLDBDQUFBO0VBQ0EseUNBQUE7RUFDQSw0Q0FBQTtFQUNBLDJDQUFBO0VBRUEsZ0NBQUE7RUFDQSwrQkFBQTtFQUNBLHNDQUFBO0VBQ0EscUNBQUE7RUFDQSx3Q0FBQTtFQUNBLHVDQUFBO0VBRUEsZ0NBQUE7RUFDQSwrQkFBQTtFQUlBLHlDQUFBO0VBQ0Esd0NBQUE7RUFDQSw2Q0FBQTtFQUNBLDRDQUFBO0VBQ0EsOENBQUE7RUFDQSw2Q0FBQTtFQUNBLGdEQUFBO0VBQ0EsK0NBQUE7RUFFQSw0Q0FBQTtFQUNBLDJDQUFBO0VBQ0Esa0RBQUE7RUFDQSxpREFBQTtFQUNBLG9EQUFBO0VBQ0EsbURBQUE7RUFFQSwyQ0FBQTtFQUNBLDBDQUFBO0VBQ0Es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 */

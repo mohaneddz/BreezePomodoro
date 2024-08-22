@@ -79,7 +79,7 @@ function updatetime(time) {
  * @returns {void}
  * */
 function play_sound(sound) {
-	const audio = new Audio(`ost/${sound}.wav`);
+	const audio = new Audio(`sounds/${sound}.wav`);
 	if (sound === 'tick') audio.volume = 0.05;
 	else audio.volume = 0.3;
 	audio.play();
@@ -93,7 +93,8 @@ function play_sound(sound) {
 function decreaseTime() {
 	if (time <= 0) {
 		next();
-		toggle_running();
+		playtimer();
+		rest ? rest_theme() : focus_theme();
 		return;
 	}
 	time -= 1;
@@ -175,6 +176,7 @@ function next() {
 
 	reset();
 	toggle_play_icon();
+	toggle_running();
 	rest ? rest_theme() : focus_theme();
 	if (round < max_rounds || !rest) play_sound(rest ? 'high' : 'deep');
 	else play_sound('mid-high');
