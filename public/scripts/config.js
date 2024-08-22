@@ -1,6 +1,6 @@
 // Constants
-export const DEFAULT_FOCUS_TIME = 3600 * 1000; // 1 hour
-export const DEFAULT_REST_TIME = 900 * 1000; // 15 minutes
+export const DEFAULT_FOCUS_TIME = 3600 ; // 1 hour
+export const DEFAULT_REST_TIME = 900; // 15 minutes
 export const DEFAULT_MAX_ROUNDS = 4;
 export const DEFAULT_BLUR = 10;
 export const DEFAULT_THEME = 'Lagoon';

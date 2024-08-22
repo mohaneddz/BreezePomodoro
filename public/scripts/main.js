@@ -55,17 +55,17 @@ function toggle_running() {
  * @returns {void}
  */
 function updatetime(time) {
-	if (time > 3600 * 1000) {
-		hours = time / 1000 / 60 / 60;
-		minutes = (time / 1000 / 60) % 60;
-		seconds = (time / 1000) % 60;
+	if (time > 3600) {
+		hours = time / 60 / 60;
+		minutes = (time / 60) % 60;
+		seconds = time % 60;
 		counter.style.setProperty('font-size', '9rem');
 		counter.textContent = `${Math.floor(hours).toString().padStart(2, '0')}:${Math.floor(minutes)
 			.toString()
 			.padStart(2, '0')}:${Math.floor(seconds).toString().padStart(2, '0')}`;
 	} else {
-		minutes = time / 1000 / 60;
-		seconds = (time / 1000) % 60;
+		minutes = time / 60;
+		seconds = time % 60;
 		counter.style.setProperty('font-size', '12rem');
 		counter.textContent = `${Math.floor(minutes).toString().padStart(2, '0')}:${Math.floor(seconds)
 			.toString()
@@ -96,7 +96,7 @@ function decreaseTime() {
 		toggle_running();
 		return;
 	}
-	time -= 1000;
+	time -= 1;
 	updatetime(time);
 	play_sound('tick');
 }
@@ -107,6 +107,8 @@ function decreaseTime() {
  * */
 function reset() {
 	time = rest ? localStorage.getItem('rest') : localStorage.getItem('focus');
+	if (!time) 
+		time = rest ? df.DEFAULT_REST_TIME : df.DEFAULT_FOCUS_TIME;
 	updatetime(time);
 	stoptimer();
 }
@@ -148,13 +150,12 @@ function playtimer() {
  * @returns {void}
  */
 function stoptimer() {
-	if (!interval) {
-		return;
-	}
+	if (!interval) return;
 	window.clearInterval(interval);
 	running = false;
 	interval = undefined;
 	resettheme();
+	playIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'href', 'img/sprites.svg#icon-play2');
 }
 
 // Playback Controls ////////////////////////////////////
@@ -225,6 +226,10 @@ function resettheme() {
 	playIcon.style.fill = 'var(--color-primary-darker)';
 }
 
+/**
+ *	Set the round counter.
+ * @param {number} round - The current round.
+ */
 function setround(round) {
 	roundCounter.textContent = `Round ${round} of ${max_rounds}`;
 }
@@ -254,13 +259,13 @@ function init_main() {
 	if (round > max_rounds) round = 1;
 
 	// Update time and round display
-	if (time >= 3600 * 1000) {
-		hours = time / 1000 / 60 / 60;
-		minutes = (time / 1000 / 60) % 60;
+	if (time >= 3600) {
+		hours = time / 60 / 60;
+		minutes = (time / 60) % 60;
 	} else {
-		minutes = time / 1000 / 60;
+		minutes = time / 60;
 	}
-	seconds = (time / 1000) % 60;
+	seconds = time % 60;
 
 	// Updating the view
 	updatetime(time);

@@ -50,16 +50,16 @@ function init_settings() {
  * @returns {string} The formatted time
  */
 function get_time_setting(time) {
-	let seconds = Math.floor((time / 1000) % 60);
-	if (time > 3600 * 1000) {
-		let hours = Math.floor((time / 3600) * 1000);
-		let minutes = Math.floor(time / (60 * 1000) - hours * 60);
+	let seconds = Math.floor(time % 60);
+	if (time > 3600) {
+		let hours = Math.floor(time / 3600);
+		let minutes = Math.floor(time / 60 - hours * 60);
 
 		return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds
 			.toString()
 			.padStart(2, '0')}}`;
 	} else {
-		let minutes = Math.floor(time / (60 * 1000));
+		let minutes = Math.floor(time / 60);
 		return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 	}
 }
@@ -163,7 +163,7 @@ function parse_duration(duration) {
 		[hour, min, sec] = parts; // Hours, minutes, and seconds
 	}
 
-	return (hour * 3600 + min * 60 + sec) * 1000;
+	return hour * 3600 + min * 60 + sec;
 }
 
 /**
