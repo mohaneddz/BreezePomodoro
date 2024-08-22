@@ -55,26 +55,32 @@ This project is organized with separation of concerns in mind. HTML, CSS, SASS, 
 
 ### Screenshot 1: Effeciency & Style
 ![Lagoon Theme](/screenshots/1.png)
+
 *Description: The timer in Lagoon theme, showcasing its vibrant and calming colors.*
 
 ### Screenshot 2: Modern Interface
 ![Settings showcase](/screenshots/2.png)
+
 *Description: Modern UI for adjusting to your prefrences.*
 
 ### Screenshot 3: Monkai Theme
 ![Monkai Theme](/screenshots/3.png)
+
 *Description: The timer in Monkai theme, with a natural feel and a bold appearance.*
 
 ### Screenshot 4: Owl Theme
 ![Responsive Design](/screenshots/4.png)
+
 *Description: for all of you night owls out there! [cyberpunk enthusiastes included].*
 
 ### Screenshot 5: Responsive Design
 ![Responsive Design](/screenshots/5.png)
+
 *Description: The timer displayed on various devices, demonstrating its responsive design.*
 
 ### Screenshot 6: Clear & Blur
 ![Responsive Design](/screenshots/6.png)
+
 *Description: Clear menu interface, with the option to blur the background as much as ayou prefer.*
 
 ## How to Use 📃
