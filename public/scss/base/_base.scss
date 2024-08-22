@@ -34,9 +34,9 @@ body {
   overflow: hidden;
   background-size: cover;
   background-attachment: fixed;
-  position: relative; /* Ensure positioning context for pseudo-element */
-  z-index: 1; /* Ensure the content is above the pseudo-element */
-  margin: 0; /* Remove default margin */
+  position: relative; 
+  z-index: 1; 
+  margin: 0;
 }
 
 ::selection {
