@@ -1,7 +1,3 @@
-Here's a more detailed and descriptive version of the README:
-
----
-
 # Wlcome to BreezePomodoro ⏲️
 
 ## Introdcution
