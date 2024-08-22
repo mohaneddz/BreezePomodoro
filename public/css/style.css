@@ -73,12 +73,12 @@
   --Monkai-color-primary-darker-rgb: 111, 86, 59;
   --Monkai-color-primary-light: rgb(196, 168, 138);
   --Monkai-color-primary-light-rgb: 196, 168, 138;
-  --Monkai-color-secondary: rgb(107, 142, 35);
-  --Monkai-color-secondary-rgb: 107, 142, 35;
-  --Monkai-color-secondary-light: rgb(141, 191, 62);
-  --Monkai-color-secondary-light-rgb: 141, 191, 62;
-  --Monkai-color-secondary-lighter: rgb(176, 209, 95);
-  --Monkai-color-secondary-lighter-rgb: 176, 209, 95;
+  --Monkai-color-secondary: rgb(41, 189, 195);
+  --Monkai-color-secondary-rgb: 41, 189, 195;
+  --Monkai-color-secondary-light: rgb(55, 213, 218);
+  --Monkai-color-secondary-light-rgb: 55, 213, 218;
+  --Monkai-color-secondary-lighter: rgb(93, 246, 252);
+  --Monkai-color-secondary-lighter-rgb: 93, 246, 252;
   --Monkai-color-tertiary: rgb(107, 107, 107);
   --Monkai-color-tertiary-rgb: 107, 107, 107;
   --Monkai-color-tertiary-dark: rgb(79, 79, 79);
@@ -157,7 +157,7 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 50%;
 }
 
 body {
@@ -168,6 +168,9 @@ body {
   overflow: hidden;
   background-size: cover;
   background-attachment: fixed;
+  position: relative; /* Ensure positioning context for pseudo-element */
+  z-index: 1; /* Ensure the content is above the pseudo-element */
+  margin: 0; /* Remove default margin */
 }
 
 ::selection {
@@ -228,8 +231,8 @@ body {
 }
 .settings input[type=range]::-webkit-slider-runnable-track {
   background: linear-gradient(to right, var(--color-primary-dark) var(--value, 50%), white var(--value, 50%));
-  border-radius: 1rem; /* Smoother track edges */
-  height: 0.5rem; /* Track height */
+  border-radius: 1rem;
+  height: 0.5rem;
 }
 .settings input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -238,23 +241,23 @@ body {
   border-radius: 50%;
   background: var(--color-primary-dark);
   cursor: pointer;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Smoother border effect */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 .settings input[type=range]::-moz-range-thumb {
   background: var(--color-primary-dark);
   height: 2rem;
   width: 2rem;
   border-radius: 50%;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Smoother border effect */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 .settings input[type=range]::-moz-range-progress {
   background: var(--color-primary-dark);
-  height: 0.5rem; /* Match track height */
+  height: 0.5rem;
 }
 .settings input[type=range]::-moz-range-track {
   background: white;
-  height: 0.5rem; /* Match track height */
-  border-radius: 1rem; /* Smoother track edges */
+  height: 0.5rem;
+  border-radius: 1rem;
 }
 .settings input[type=radio] {
   margin-right: 1rem;
@@ -287,7 +290,6 @@ nav .home:active {
 }
 
 .main {
-  background-image: linear-gradient(to top, rgba(var(--color-primary-rgb), 0.8), rgba(var(--color-secondary-rgb), 0.8)), url("../../img/Default.jpg");
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -326,7 +328,16 @@ nav .home:active {
   text-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.4);
   background-color: var(--color-primary-dark);
   padding: 2rem;
+  cursor: pointer;
   border-radius: 5px;
+}
+.main__container--timer:hover {
+  filter: brightness(90%);
+  transform: scale(1.05);
+}
+.main__container--timer:active {
+  filter: brightness(90%);
+  transform: scale(0.9);
 }
 .main__container__controls {
   display: flex;
@@ -370,7 +381,6 @@ nav .home:active {
 }
 
 .settings {
-  background-image: linear-gradient(to top, rgba(var(--color-primary-rgb), 0.8), rgba(var(--color-secondary-rgb), 0.8)), url("../../img/Default.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

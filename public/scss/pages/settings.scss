@@ -1,11 +1,5 @@
 .settings {
 	// Background
-	background-image: linear-gradient(
-			to top,
-			rgba(var(--color-primary-rgb), 0.8),
-			rgba(var(--color-secondary-rgb), 0.8)
-		),
-		url('../../img/Default.jpg');
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;

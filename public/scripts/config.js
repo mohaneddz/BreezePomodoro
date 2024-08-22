@@ -1,9 +1,10 @@
 // Constants
 export const DEFAULT_FOCUS_TIME = 3600 * 1000; // 1 hour
 export const DEFAULT_REST_TIME = 900 * 1000; // 15 minutes
-export const DEFAULT_MAX_ROUNDS = 6;
+export const DEFAULT_MAX_ROUNDS = 4;
 export const DEFAULT_BLUR = 10;
 export const DEFAULT_THEME = 'Lagoon';
+export const DEFAULT_BACKGROUND = `../../img/Default.jpg`;
 
 export const setTheme = function (theme) {
 	const root = document.documentElement;
@@ -39,6 +40,16 @@ export const setTheme = function (theme) {
 	root.style.setProperty('--color-focus-rgb', `var(--${theme}-color-focus-rgb)`);
 };
 
-export const show_err = function (msg) {
-	console.log(msg);
-};
+export function setbackground(imageUrl) {
+	document.body.style.backgroundImage = `linear-gradient(
+        to top,
+        rgba(var(--color-primary-rgb), 0.8),
+        rgba(var(--color-secondary-rgb), 0.8)
+    ), url(${imageUrl})`;
+	document.body.style.backgroundSize = 'cover';
+	document.body.style.backgroundPosition = 'center';
+}
+export function setblur(blur)
+{
+	document.body.style.backdropFilter = `blur(${blur}px)`;
+}

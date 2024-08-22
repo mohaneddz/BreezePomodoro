@@ -1,10 +1,4 @@
 .main {
-	background-image: linear-gradient(
-			to top,
-			rgba(var(--color-primary-rgb), 0.8),
-			rgba(var(--color-secondary-rgb), 0.8)
-		),
-		url('../../img/Default.jpg');
 	width: 100vw;
 	height: 100vh;
 	display: flex;
@@ -47,7 +41,16 @@
 			text-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.4);
 			background-color: var(--color-primary-dark);
 			padding: 2rem;
+			cursor: pointer;
 			border-radius: 5px;
+			&:hover{
+				filter: brightness(90%);
+				transform: scale(1.05);
+			}
+			&:active{
+				filter: brightness(90%);
+				transform: scale(0.9);
+			}
 		}
 
 		&__controls {
