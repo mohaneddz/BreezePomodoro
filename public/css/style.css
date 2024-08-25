@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
-  /* Default Theme: LAGOON */
   --color-primary: rgb(106, 89, 149);
   --color-primary-rgb: 106, 89, 149;
   --color-primary-dark: rgb(78, 61, 123);
@@ -131,23 +130,6 @@
   --Owl-color-focus-rgb: 255, 121, 46;
 }
 
-/*
-// 0 - 600px:      Phone
-// 600 - 900px:    Tablet portrait
-// 900 - 1200px:   Tablet landscape
-// [1200 - 1800] is where our normal styles apply
-// 1800px + :      Big desktop
-
-// $breakpoint argument choices:
-// - phone
-// - tab-port
-// - tab-land
-// - big-desktop
-
-// ORDER: Base + typography > general layout + grid > page layout > components
-
-// 1em = 16px
-// */
 *,
 *::after,
 *::before {
@@ -188,9 +170,9 @@ body {
   overflow: hidden;
   background-size: cover;
   background-attachment: fixed;
-  position: relative; /* Ensure positioning context for pseudo-element */
-  z-index: 1; /* Ensure the content is above the pseudo-element */
-  margin: 0; /* Remove default margin */
+  position: relative;
+  z-index: 1;
+  margin: 0;
 }
 
 ::selection {

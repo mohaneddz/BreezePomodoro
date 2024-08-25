@@ -103,6 +103,7 @@ function reset_settings(e) {
 	localStorage.setItem('blur', df.DEFAULT_BLUR);
 	localStorage.setItem('theme', df.DEFAULT_THEME);
 	localStorage.setItem('backgroundImage', df.DEFAULT_BACKGROUND);
+	df.setTheme(df.DEFAULT_THEME);
 	df.setbackground(df.DEFAULT_BACKGROUND);
 	init_settings();
 }
