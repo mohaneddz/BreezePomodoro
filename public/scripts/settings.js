@@ -57,7 +57,7 @@ function get_time_setting(time) {
 
 		return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds
 			.toString()
-			.padStart(2, '0')}}`;
+			.padStart(2, '0')}`;
 	} else {
 		let minutes = Math.floor(time / 60);
 		return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
